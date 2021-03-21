@@ -1,0 +1,3679 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        "ScriptHookDotNet"
+    </assembly>
+    <members>
+        <member name="M:GTA.Viewport.Equals(GTA.Viewport@,GTA.Viewport@)">
+            <summary>
+Returns a value indicating whether the two viewports are equivalent.
+</summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="value1" /> has the same value as <paramref name="value2" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Viewport.Equals(GTA.Viewport)">
+            <summary>
+Returns a value indicating whether this instance is equal to the specified object.
+</summary>
+            <param name="other">A <see cref="T:GTA.Viewport" /> to compare with this instance.</param>
+            <returns>
+                <c>true</c> if <paramref name="other" /> has the same value as this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Viewport.Equals(System.Object)">
+            <summary>
+Returns a value indicating whether this instance is equal to the specified object.
+</summary>
+            <param name="obj">An object to compare with this instance.</param>
+            <returns>
+                <c>true</c> if <paramref name="obj" /> has the same value as this instance; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Viewport.GetHashCode">
+            <summary>
+Returns the hash code for this instance.
+</summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GTA.Viewport.ToString">
+            <summary>
+Converts the value of the viewport to its equivalent string representation.
+</summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:GTA.Viewport.op_Inequality(GTA.Viewport,GTA.Viewport)">
+            <summary>
+Tests for inequality between two viewports.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has a different value than <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Viewport.op_Equality(GTA.Viewport,GTA.Viewport)">
+            <summary>
+Tests for equality between two viewports.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has the same value as <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Viewport.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Viewport" /> structure.
+</summary>
+            <param name="x">The X coordinate of the viewport.</param>
+            <param name="y">The Y coordinate of the viewport.</param>
+            <param name="width">The width of the viewport.</param>
+            <param name="height">The height of the viewport.</param>
+            <param name="minZ">The minimum Z distance of the viewport.</param>
+            <param name="maxZ">The maximum Z distance of the viewport.</param>
+        </member>
+        <member name="M:GTA.Viewport.#ctor(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Viewport" /> structure.
+</summary>
+            <param name="x">The X coordinate of the viewport.</param>
+            <param name="y">The Y coordinate of the viewport.</param>
+            <param name="width">The width of the viewport.</param>
+            <param name="height">The height of the viewport.</param>
+        </member>
+        <member name="P:GTA.Viewport.MaxZ">
+            <summary>
+Gets or sets the viewport's maximum Z depth.
+</summary>
+        </member>
+        <member name="P:GTA.Viewport.MinZ">
+            <summary>
+Gets or sets the viewport's minimum Z depth.
+</summary>
+        </member>
+        <member name="P:GTA.Viewport.Height">
+            <summary>
+Gets or sets the viewport's height.
+</summary>
+        </member>
+        <member name="P:GTA.Viewport.Width">
+            <summary>
+Gets or sets the viewport's width.
+</summary>
+        </member>
+        <member name="P:GTA.Viewport.Y">
+            <summary>
+Gets or sets the viewport's Y position.
+</summary>
+        </member>
+        <member name="P:GTA.Viewport.X">
+            <summary>
+Gets or sets the viewport's X position.
+</summary>
+        </member>
+        <member name="T:GTA.Viewport">
+            <summary>
+Defines a rectangular region of a render-target surface onto which 
+a 3D rendering is projected.
+</summary>
+            <unmanaged>D3DVIEWPORT9</unmanaged>
+        </member>
+        <member name="M:GTA.value.Resources.GetTexture(System.String)">
+            <summary>
+Returns a Texture contained as an embedded resource file in the script
+</summary>
+        </member>
+        <member name="M:GTA.value.Resources.GetText(System.String)">
+            <summary>
+Returns the text of an embedded resource file included in the script
+</summary>
+        </member>
+        <member name="M:GTA.value.Resources.GetText(System.String,System.Text.Encoding)">
+            <summary>
+Returns the text of an embedded resource file included in the script
+</summary>
+        </member>
+        <member name="M:GTA.value.Resources.GetData(System.String)">
+            <summary>
+Returns the data of an embedded resource file included in the script
+</summary>
+        </member>
+        <member name="M:GTA.Garage.GetVehiclesInside">
+            <summary>
+Returns all vehicles inside the garage. SLOW! Use isVehicleInside istead if possible!
+</summary>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueModel(System.String)">
+            <summary>
+Get a value with the given name from the settings file and convert is to a model.
+The model may be given as modelname, integer or hex value.
+</summary>
+            <param name="OptionName">The name of the value to look for.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueModel(System.String,System.String)">
+            <summary>
+Get a value with the given name from the settings file and convert is to a model.
+The model may be given as modelname, integer or hex value.
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueModel(System.String,GTA.Model)">
+            <summary>
+Get a value with the given name from the settings file and convert is to a model.
+The model may be given as modelname, integer or hex value.
+</summary>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueModel(System.String,System.String,GTA.Model)">
+            <summary>
+Get a value with the given name from the settings file and convert is to a model.
+The model may be given as modelname, integer or hex value.
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueKey(System.String,System.Windows.Forms.Keys)">
+            <summary>
+Get a value with the given name from the settings file and convert is to a key.
+The key may be given as the key's name or as keycode.
+</summary>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueKey(System.String,System.String,System.Windows.Forms.Keys)">
+            <summary>
+Get a value with the given name from the settings file and convert is to a key.
+The key may be given as the key's name or as keycode.
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueString(System.String)">
+            <summary>
+Get a string value with the given name from the settings file.
+</summary>
+            <param name="OptionName">The name of the value to look for.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueString(System.String,System.String)">
+            <summary>
+Get a string value with the given name from the settings file.
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueString(System.String,System.String,System.String)">
+            <summary>
+Get a string value with the given name and category from the settings file.
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueInteger(System.String,System.Int32)">
+            <summary>
+Get an integer value with the given name from the settings file.
+</summary>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueInteger(System.String,System.String,System.Int32)">
+            <summary>
+Get an integer value with the given name from the settings file.
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueFloat(System.String,System.Single)">
+            <summary>
+Get a float value with the given name from the settings file.
+</summary>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueFloat(System.String,System.String,System.Single)">
+            <summary>
+Get a float value with the given name from the settings file.
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueBool(System.String,System.Boolean)">
+            <summary>
+Get a boolean value with the given name from the settings file.
+INI values that return true: true, yes, on, 1.
+INI values that return false: false, no, off, 0.
+</summary>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueBool(System.String,System.String,System.Boolean)">
+            <summary>
+Get a boolean value with the given name from the settings file.
+INI values that return true: true, yes, on, 1.
+INI values that return false: false, no, off, 0.
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueVector3(System.String)">
+            <summary>
+Get the value with the given name from the settings file and convert it to a Vector3.
+The 3 float values can be seperated by space or by a comma ',' .
+</summary>
+            <param name="OptionName">The name of the value to look for.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueVector3(System.String,System.String)">
+            <summary>
+Get the value with the given name from the settings file and convert it to a Vector3.
+The 3 float values can be seperated by space or by a comma ',' .
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueVector3(System.String,System.String,GTA.Vector3)">
+            <summary>
+Get the value with the given name from the settings file and convert it to a Vector3.
+The 3 float values can be seperated by space or by a comma ',' .
+</summary>
+            <param name="Category">The category of the value to look for. (without the []-brackets)</param>
+            <param name="OptionName">The name of the value to look for.</param>
+            <param name="DefaultValue">Is returned when the value is not found or invalid.</param>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueNames">
+            <summary>
+Get the names of all values in the default category.
+</summary>
+        </member>
+        <member name="M:GTA.SettingsFile.GetValueNames(System.String)">
+            <summary>
+Get the names of all values in this category.
+</summary>
+        </member>
+        <member name="M:GTA.SettingsFile.GetCategoryNames">
+            <summary>
+Get the names of all categories.
+</summary>
+        </member>
+        <member name="M:GTA.SettingsFile.Load">
+            <summary>
+Load the settings file again. In is automatically loaded on script startup.
+</summary>
+        </member>
+        <member name="P:GTA.SettingsFile.Filename">
+            <summary>
+The setting file has the same filename as the script, just with an 'ini' extension.
+</summary>
+        </member>
+        <member name="M:GTA.Timer.Stop">
+            <summary>
+Stops the Timer from firing Tick events and freezes the current value of ElapsedTime.
+</summary>
+        </member>
+        <member name="M:GTA.Timer.Start">
+            <summary>
+Starts the Timer and resets the ElapsedTime back to 0. The Tick event will fire each Interval if Interval is greater than or equal to 0.
+</summary>
+        </member>
+        <member name="P:GTA.Timer.Interval">
+            <summary>
+The interval (in Milliseconds) at which the Tick event will be fired. The Tick event will not run if Interval is negative.
+Any Wait() in your Script will delay the next Tick until after the Wait is finished.
+</summary>
+        </member>
+        <member name="P:GTA.Timer.ElapsedTime">
+            <summary>
+Time elapsed since the last Start. Does not increase when the Timer is stopped.
+</summary>
+        </member>
+        <member name="P:GTA.Euphoria.LeanTowardsObjectHelper.Offset">
+            <summary>
+The offset from the object.
+positive X is right, positive Y is in front, positive Z is on Top 
+</summary>
+        </member>
+        <member name="P:GTA.Euphoria.GrabHelper.Offset4">
+            <summary>
+The Offset from ItemToGrab, that defines the area where to grab. LineGrab uses offsets 1+2, SurfaceGrab uses offsets 1-4.
+</summary>
+        </member>
+        <member name="P:GTA.Euphoria.GrabHelper.Offset3">
+            <summary>
+The Offset from ItemToGrab, that defines the area where to grab. LineGrab uses offsets 1+2, SurfaceGrab uses offsets 1-4.
+</summary>
+        </member>
+        <member name="P:GTA.Euphoria.GrabHelper.Offset2">
+            <summary>
+The Offset from ItemToGrab, that defines the area where to grab. LineGrab uses offsets 1+2, SurfaceGrab uses offsets 1-4.
+</summary>
+        </member>
+        <member name="P:GTA.Euphoria.GrabHelper.Offset1">
+            <summary>
+The Offset from ItemToGrab, that defines the area where to grab. LineGrab uses offsets 1+2, SurfaceGrab uses offsets 1-4.
+</summary>
+        </member>
+        <member name="P:GTA.Euphoria.BeingShotHelper.TimeBeforeCollapse">
+            <summary>
+Time before the ped will collapse, given in seconds.
+</summary>
+        </member>
+        <member name="P:GTA.Euphoria.BeingShotHelper.TimeBeforeReachForWound">
+            <summary>
+Time before the ped will reach for the wound, given in seconds.
+</summary>
+        </member>
+        <member name="M:GTA.Euphoria.CustomHelper.Start">
+            <summary>
+Start the Euphoria animation. It will run up to a maximum of 65 seconds, or until the first previous Euphoria animation ends. Previous Euphoria animations will NOT be disabled.
+</summary>
+        </member>
+        <member name="M:GTA.Euphoria.CustomHelper.Start(System.Int32)">
+            <summary>
+Start the Euphoria animation. Maximum duration is 65535 milliseconds. Calling this will disable previous Euphoria animations.
+</summary>
+        </member>
+        <member name="M:GTA.Euphoria.CustomMessage.SendTo(GTA.Ped)">
+            <summary>
+Start the Euphoria animation. It will run up to a maximum of 65 seconds, or until the first previous Euphoria animation ends. Previous Euphoria animations will NOT be disabled.
+</summary>
+        </member>
+        <member name="M:GTA.Euphoria.CustomMessage.SendTo(GTA.Ped,System.Int32)">
+            <summary>
+Start the Euphoria animation. Maximum duration is 65535 milliseconds. Calling this will disable previous Euphoria animations.
+</summary>
+        </member>
+        <member name="M:GTA.Euphoria.BaseMessage.SetValue(GTA.Euphoria.nmString,GTA.Vector3)">
+            <summary>
+For directional vectors: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="M:GTA.value.PedComponent.ChangeIfValid(System.Int32,System.Int32)">
+            <summary>
+Changes ModelIndex and TextureIndex at the same time. Will do nothing when a given index is invalid.
+</summary>
+        </member>
+        <member name="M:GTA.value.PedComponent.Change(System.Int32,System.Int32)">
+            <summary>
+Changes ModelIndex and TextureIndex at the same time. May throw an ArgumentOutOfRangeException when a given index is invalid.
+</summary>
+        </member>
+        <member name="M:GTA.value.PedComponent.isValid(System.Int32,System.Int32)">
+            <summary>
+Returns whether or not the given model and texture index combination is valid.
+</summary>
+        </member>
+        <member name="P:GTA.value.PedComponent.TextureIndex">
+            <summary>
+Gets or sets the index of the texture for the currently selected component model. (Value range: 0 to AvailableTextures-1)
+</summary>
+        </member>
+        <member name="P:GTA.value.PedComponent.ModelIndex">
+            <summary>
+Gets or sets the index of the model for this component. Changing it will reset the TextureIndex to 0! (Value range: 0 to AvailableModels-1)
+</summary>
+        </member>
+        <member name="P:GTA.value.PedComponent.AvailableTextures">
+            <summary>
+Returns the number of available textures for the currently selected component model.
+</summary>
+        </member>
+        <member name="P:GTA.value.PedComponent.AvailableModels">
+            <summary>
+Returns the number of available models for the component.
+</summary>
+        </member>
+        <member name="M:GTA.Vector4.Equals(GTA.Vector4@,GTA.Vector4@)">
+            <summary>
+Determines whether the specified object instances are considered equal. 
+</summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="value1" /> is the same instance as <paramref name="value2" /> or 
+if both are <c>null</c> references or if <c>value1.Equals(value2)</c> returns <c>true</c>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Equals(GTA.Vector4)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to the specified object. 
+</summary>
+            <param name="other">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Equals(System.Object)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to a specified object. 
+</summary>
+            <param name="obj">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Vector4.GetHashCode">
+            <summary>
+Returns the hash code for this instance.
+</summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GTA.Vector4.ToString">
+            <summary>
+Converts the value of the object to its equivalent string representation.
+</summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:GTA.Vector4.op_Inequality(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Tests for inequality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has a different value than <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Vector4.op_Equality(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Tests for equality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has the same value as <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Vector4.op_Division(GTA.Vector4,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="vector">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector4.op_Multiply(System.Single,GTA.Vector4)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="vector">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector4.op_Multiply(GTA.Vector4,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="vector">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector4.op_UnaryNegation(GTA.Vector4)">
+            <summary>
+Reverses the direction of a given vector.
+</summary>
+            <param name="value">The vector to negate.</param>
+            <returns>A vector facing in the opposite direction.</returns>
+        </member>
+        <member name="M:GTA.Vector4.op_Subtraction(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Subtracts two vectors.
+</summary>
+            <param name="left">The first vector to subtract.</param>
+            <param name="right">The second vector to subtract.</param>
+            <returns>The difference of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector4.op_Addition(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Adds two vectors.
+</summary>
+            <param name="left">The first vector to add.</param>
+            <param name="right">The second vector to add.</param>
+            <returns>The sum of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Maximize(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Returns a vector containing the largest components of the specified vectors.
+</summary>
+            <param name="value1">The first source vector.</param>
+            <param name="value2">The second source vector.</param>
+            <returns>A vector containing the largest components of the source vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Minimize(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Returns a vector containing the smallest components of the specified vectors.
+</summary>
+            <param name="value1">The first source vector.</param>
+            <param name="value2">The second source vector.</param>
+            <returns>A vector containing the smallest components of the source vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Transform(GTA.Vector4,GTA.Quaternion)">
+            <summary>
+Transforms a 4D vector by the given <see cref="T:GTA.Quaternion" /> rotation.
+</summary>
+            <param name="vector">The vector to rotate.</param>
+            <param name="rotation">The <see cref="T:GTA.Quaternion" /> rotation to apply.</param>
+            <returns>The transformed <see cref="T:GTA.Vector4" />.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Transform(GTA.Vector4,GTA.Matrix)">
+            <summary>
+Transforms a 4D vector by the given <see cref="T:GTA.Matrix" />.
+</summary>
+            <param name="vector">The source vector.</param>
+            <param name="transformation">The transformation <see cref="T:GTA.Matrix" />.</param>
+            <returns>The transformed <see cref="T:GTA.Vector4" />.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Normalize(GTA.Vector4)">
+            <summary>
+Converts the vector into a unit vector.
+</summary>
+            <param name="vector">The vector to normalize.</param>
+            <returns>The normalized vector.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Dot(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Calculates the dot product of two vectors.
+</summary>
+            <param name="left">First source vector.</param>
+            <param name="right">Second source vector.</param>
+            <returns>The dot product of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Distance(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Calculates the distance between two vectors.
+</summary>
+            <param name="value1">The first vector.</param>
+            <param name="value2">The second vector.</param>
+            <returns>The distance between the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Lerp(GTA.Vector4,GTA.Vector4,System.Single)">
+            <summary>
+Performs a linear interpolation between two vectors.
+</summary>
+            <param name="start">Start vector.</param>
+            <param name="end">End vector.</param>
+            <param name="amount">Value between 0 and 1 indicating the weight of <paramref name="end" />.</param>
+            <returns>The linear interpolation of the two vectors.</returns>
+            <remarks>
+This method performs the linear interpolation based on the following formula.
+<code>start + (end - start) * amount</code>
+Passing <paramref name="amount" /> a value of 0 will cause <paramref name="start" /> to be returned; a value of 1 will cause <paramref name="end" /> to be returned. 
+</remarks>
+        </member>
+        <member name="M:GTA.Vector4.Clamp(GTA.Vector4,GTA.Vector4,GTA.Vector4)">
+            <summary>
+Restricts a value to be within a specified range.
+</summary>
+            <param name="value">The value to clamp.</param>
+            <param name="min">The minimum value.</param>
+            <param name="max">The maximum value.</param>
+            <returns>The clamped value.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Negate(GTA.Vector4)">
+            <summary>
+Reverses the direction of a given vector.
+</summary>
+            <param name="value">The vector to negate.</param>
+            <returns>A vector facing in the opposite direction.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Divide(GTA.Vector4,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="value">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Modulate(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Modulates a vector by another.
+</summary>
+            <param name="left">The first vector to modulate.</param>
+            <param name="right">The second vector to modulate.</param>
+            <returns>The modulated vector.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Multiply(GTA.Vector4,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="value">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Subtract(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Subtracts two vectors.
+</summary>
+            <param name="left">The first vector to subtract.</param>
+            <param name="right">The second vector to subtract.</param>
+            <returns>The difference of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Add(GTA.Vector4,GTA.Vector4)">
+            <summary>
+Adds two vectors.
+</summary>
+            <param name="left">The first vector to add.</param>
+            <param name="right">The second vector to add.</param>
+            <returns>The sum of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector4.Normalize">
+            <summary>
+Converts the vector into a unit vector.
+</summary>
+        </member>
+        <member name="M:GTA.Vector4.Length">
+            <summary>
+Calculates the length of the vector.
+</summary>
+            <returns>The length of the vector.</returns>
+        </member>
+        <member name="M:GTA.Vector4.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Vector4" /> class.
+</summary>
+            <param name="x">Initial value for the X component of the vector.</param>
+            <param name="y">Initial value for the Y component of the vector.</param>
+            <param name="z">Initial value for the Z component of the vector.</param>
+            <param name="w">Initial value for the W component of the vector.</param>
+        </member>
+        <member name="M:GTA.Vector4.#ctor(GTA.Vector3,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Vector4" /> class.
+</summary>
+            <param name="value">A vector containing the values with which to initialize the X, Y, and Z components</param>
+            <param name="w">Initial value for the W component of the vector.</param>
+        </member>
+        <member name="M:GTA.Vector4.#ctor(GTA.Vector2,System.Single,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Vector4" /> class.
+</summary>
+            <param name="value">A vector containing the values with which to initialize the X and Y components</param>
+            <param name="z">Initial value for the Z component of the vector.</param>
+            <param name="w">Initial value for the W component of the vector.</param>
+        </member>
+        <member name="F:GTA.Vector4.W">
+            <summary>
+Gets or sets the W component of the vector.
+</summary>
+            <value>The W component of the vector.</value>
+        </member>
+        <member name="F:GTA.Vector4.Z">
+            <summary>
+Gets or sets the Z component of the vector.
+</summary>
+            <value>The Z component of the vector.</value>
+        </member>
+        <member name="F:GTA.Vector4.Y">
+            <summary>
+Gets or sets the Y component of the vector.
+</summary>
+            <value>The Y component of the vector.</value>
+        </member>
+        <member name="F:GTA.Vector4.X">
+            <summary>
+Gets or sets the X component of the vector.
+</summary>
+            <value>The X component of the vector.</value>
+        </member>
+        <member name="T:GTA.Vector4">
+            <summary>
+Defines a four component vector.
+</summary>
+            <unmanaged>D3DXVECTOR4</unmanaged>
+        </member>
+        <member name="P:GTA.Group.SeparationRange">
+            <summary>
+The distance at which members leave the group automatically (in meters/yard). Default is 75.
+</summary>
+        </member>
+        <member name="M:GTA.Native.Pointer.ToInputParameter">
+            <summary>
+Unpoints the pointer and returns it as a usual parameter that is NOT a poitner anymore.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.WeaponAccuracy">
+            <summary>
+Weapon accuracy. Overrides Ped.Accuracy
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.Teamwork">
+            <summary>
+Not sure what it does or which values it takes. Common value is 2.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.TargetLossResponse">
+            <summary>
+Not sure what it does or which values it takes. Common values are 0 and 2.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.TargetInjuredReaction">
+            <summary>
+Not sure what it does or which values it takes. Common value is 0.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.StandingStyle">
+            <summary>
+Not sure what it does or which values it takes.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.SightRange">
+            <summary>
+Range of sight in meters/yards.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.RetreatingBehavior">
+            <summary>
+Not sure what it does or which values it takes. Common values are 1 and 2.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.NavigationStyle">
+            <summary>
+Not sure what it does or which values it takes. Common values are 0, 1 and 2.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.MovementStyle">
+            <summary>
+Not sure what it does or which values it takes.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.LowHealth">
+            <summary>
+Not sure what it does or which values it takes.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.FireRate">
+            <summary>
+Not sure what it does or which values it takes. Common values are 0, 1 and 2.
+</summary>
+        </member>
+        <member name="P:GTA.DecisionMaker.Caution">
+            <summary>
+Not sure which values it takes. 2 is a common value and means most likely "more cautious than normal".
+</summary>
+        </member>
+        <member name="M:GTA.Game.Exists(GTA.base.Object)">
+            <summary>
+Returns whether the given object still exists in game.
+</summary>
+        </member>
+        <member name="T:GTA.TaskSequence">
+            <summary>
+TaskSequences are used to arrange several Tasks into a sequence.
+</summary>
+        </member>
+        <member name="M:GTA.Graphics.DrawLine(System.Drawing.PointF,System.Drawing.PointF,System.Single,System.Drawing.Color)">
+            <summary>
+Draws a colored line.
+</summary>
+        </member>
+        <member name="M:GTA.Graphics.DrawLine(System.Single,System.Single,System.Single,System.Single,System.Single,System.Drawing.Color)">
+            <summary>
+Draws a colored line.
+</summary>
+        </member>
+        <member name="M:GTA.Graphics.DrawRectangle(System.Single,System.Single,System.Single,System.Single,System.Drawing.Color)">
+            <summary>
+Draws a colored Rectangle.
+</summary>
+        </member>
+        <member name="M:GTA.Graphics.DrawRectangle(System.Drawing.RectangleF,System.Drawing.Color)">
+            <summary>
+Draws a colored Rectangle.
+</summary>
+        </member>
+        <member name="M:GTA.Direct3D.NewTextureInternal(System.Byte[],GTA.ImageInformation@)">
+            <summary>
+Creates a new Direct3D Font and returns the pointer. LOCAL ONLY!
+</summary>
+        </member>
+        <member name="M:GTA.Direct3D.NewFontInternal(System.Int32,System.Int32,System.Int32,System.Int32,System.Boolean,System.Int32,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+Creates a new Direct3D Font and returns the pointer. LOCAL ONLY!
+</summary>
+        </member>
+        <member name="M:GTA.Direct3D.AddNewObject(GTA.base.iD3DObject)">
+            <summary>
+Adds a new Direct3D object to the ObjectCache and returns the ID.
+</summary>
+        </member>
+        <member name="M:GTA.World.SetDoorState(GTA.Model,GTA.Vector3,System.Boolean,System.Single)">
+            <summary>
+Sets the state of the closest door with the given model.
+</summary>
+            <param name="DoorModel">Model of the nearby door to open.</param>
+            <param name="NearbyPosition">A position close to the door.</param>
+            <param name="Locked">The door cannot be moved when locked.</param>
+            <param name="Angle">The current door angle. 0 is closed, 1 is open, -1 is open to the other direction.</param>
+        </member>
+        <member name="M:GTA.World.GetAllObjects">
+            <summary>
+Returns all currently existing objects. VERY SLOW! Also includes mission objects!
+Make sure to check every returned Object with Exists() before using it!
+</summary>
+        </member>
+        <member name="M:GTA.World.GetAllObjects(GTA.Model)">
+            <summary>
+Returns all currently existing objects of one model. VERY SLOW! Also includes mission objects!
+Make sure to check every returned Object with Exists() before using it!
+</summary>
+        </member>
+        <member name="M:GTA.World.GetAllVehicles">
+            <summary>
+Returns all currently existing vehicles. SLOW! Also includes player and mission vehicles!
+Make sure to check every returned Vehicle with Exists() before using it!
+</summary>
+        </member>
+        <member name="M:GTA.World.GetAllVehicles(GTA.Model)">
+            <summary>
+Returns all currently existing vehicles of one model. Slow, but very reliable! Also includes player and mission vehicles!
+Make sure to check every returned Vehicle with Exists() before using it!
+</summary>
+        </member>
+        <member name="M:GTA.World.GetVehicles(GTA.Vector3,System.Single)">
+            <summary>
+Returns all vehicles in the given area. Slow, but very reliable! Also includes player and mission vehicles!
+</summary>
+        </member>
+        <member name="M:GTA.World.GetVehicles(GTA.Vector3,System.Single,GTA.Model)">
+            <summary>
+Returns all vehicles of one model in the given area. Slow, but very reliable! Also includes player and mission vehicles!
+</summary>
+        </member>
+        <member name="M:GTA.World.GetAllPeds">
+            <summary>
+Returns all currently existing peds. SLOW! Also includes players, mission peds and vehicle passengers!
+Make sure to check every returned Ped with Exists() before using it!
+</summary>
+        </member>
+        <member name="M:GTA.World.GetAllPeds(GTA.Model)">
+            <summary>
+Returns all currently existing peds of one model. Slow, but very reliable! Also includes players, mission peds and vehicle passengers!
+Make sure to check every returned Ped with Exists() before using it!
+</summary>
+        </member>
+        <member name="M:GTA.World.GetPeds(GTA.Vector3,System.Single)">
+            <summary>
+Returns all peds in the given area. Slow, but very reliable! Also includes players, mission peds and vehicle passengers!
+</summary>
+        </member>
+        <member name="M:GTA.World.GetPeds(GTA.Vector3,System.Single,System.Int32)">
+            <summary>
+Returns all peds in the given area. Slow, but very reliable! Also includes players, mission peds and vehicle passengers!
+</summary>
+        </member>
+        <member name="P:GTA.World.PedDensity">
+            <summary>
+Sets the ped density. 1.0 is default, 2.0 is twice as much as normal, etc.
+</summary>
+        </member>
+        <member name="P:GTA.World.CarDensity">
+            <summary>
+Sets the car density. 1.0 is default, 2.0 is twice as much as normal, etc.
+</summary>
+        </member>
+        <member name="M:GTA.World.DrawLight(GTA.Vector3,System.Drawing.Color,System.Single,System.Single)">
+            <summary>
+Draws a 3D Light at the given position.
+</summary>
+            <param name="Intensity">Light Intensity. 50 is a common value.</param>
+        </member>
+        <member name="M:GTA.World.DrawCheckpoint(GTA.Vector3,System.Single,System.Drawing.Color)">
+            <summary>
+Draws a 3D Checkpoint at the given position.
+</summary>
+        </member>
+        <member name="P:GTA.Script.GeneralInfo">
+            <summary>
+The general info is shown by the 'ScriptHelp' console command, together with all available console commands.
+</summary>
+        </member>
+        <member name="P:GTA.Script.GUID">
+            <summary>
+The GUID is used to uniquely idetify your script. With it you are able to communicate between scripts.
+DO NOT use the same GUID for multiple scripts!
+If you want to get a new GUID for your script, just google "generate guid" to find an online generator.
+</summary>
+        </member>
+        <member name="E:GTA.Script.PerFrameDrawing">
+            <summary>
+Will run every Frame. Use ONLY for drawing functions! Do NOT call Wait() here!
+</summary>
+        </member>
+        <member name="P:GTA.Script.Resources">
+            <summary>
+Allows access to resources embedded in the script
+</summary>
+        </member>
+        <member name="P:GTA.Script.Settings">
+            <summary>
+Access the settings file of the script.
+It has the same filename as the script, just with an 'ini' extension.
+</summary>
+        </member>
+        <member name="T:GTA.RemoteScriptDomain">
+            <summary>
+Factory class to create objects exposing IRemoteInterface
+</summary>
+        </member>
+        <member name="M:GTA.Vehicle.GetOffset(GTA.Vector3)">
+            <summary>
+Returns the given position as directional offset using the following directions:
+positive X is right, positive Y is in front, positive Z is on Top 
+</summary>
+        </member>
+        <member name="M:GTA.Vehicle.GetOffsetPosition(GTA.Vector3)">
+            <summary>
+Returns the given offset in world coordinates.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="P:GTA.Vehicle.FeatureColor2">
+            <summary>
+Gets or sets the color of some extra features for the vehicle. (stripes, etc.)
+</summary>
+        </member>
+        <member name="P:GTA.Vehicle.FeatureColor1">
+            <summary>
+Gets or sets the color of some extra features for the vehicle. (stripes, etc.)
+</summary>
+        </member>
+        <member name="P:GTA.Vehicle.SpecularColor">
+            <summary>
+Gets or sets the specular color of the vehicle. (for sun reflections, etc.)
+</summary>
+        </member>
+        <member name="P:GTA.Vehicle.Color">
+            <summary>
+Gets or sets the base color of the vehicle.
+</summary>
+        </member>
+        <member name="P:GTA.Vehicle.PetrolTankHealth">
+            <summary>
+The current health of the car's petrol tank. 1000 is maximum, 0 is broken, can go below 0 if burning. 
+</summary>
+        </member>
+        <member name="P:GTA.Vehicle.EngineHealth">
+            <summary>
+The current health of the car's engine. 1000 is maximum, 0 is broken, can go below 0 if burning. 
+</summary>
+        </member>
+        <member name="M:GTA.Vehicle.ApplyForceRelative(GTA.Vector3)">
+            <summary>
+Applies a force that is relative to the current orientation of the vehicle.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="M:GTA.Vehicle.ApplyForceRelative(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Applies a force that is relative to the current orientation of the vehicle.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="M:GTA.Vehicle.ApplyForce(GTA.Vector3)">
+            <summary>
+Applies a force given in world coordinates to the vehicle.
+</summary>
+        </member>
+        <member name="M:GTA.Vehicle.ApplyForce(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Applies a force given in world coordinates to the vehicle.
+</summary>
+        </member>
+        <member name="P:GTA.Vehicle.CurrentRPM">
+            <summary>
+Returns a value between 0 and 1 that represents how far you push the RPM of the engine currently.
+</summary>
+        </member>
+        <member name="P:GTA.Vehicle.CurrentRoom">
+            <summary>
+Gets or sets the interior room the vehicle currently is at. It needs to be set correctly for the vehicle to be visible inside the room.
+</summary>
+        </member>
+        <member name="P:GTA.Vehicle.Rotation">
+            <summary>
+Gets or sets the rotation of the vehicle. X is pitch, Y is roll, Z is yaw.
+Can be slightly off. Use RotationQuaternion if it should be perfectly accurate.
+</summary>
+        </member>
+        <member name="P:GTA.Pickup.CurrentRoom">
+            <summary>
+Gets or sets the interior room the pickup currently is at. It needs to be set correctly for the pickup to be visible inside the room.
+</summary>
+        </member>
+        <member name="M:GTA.Ped.GetOffsetPosition(GTA.Vector3)">
+            <summary>
+Returns the given offset in world coordinates.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="M:GTA.Ped.AttachTo(GTA.Vehicle,GTA.Vector3)">
+            <summary>
+Attaches the ped to a vehicle WITHOUT physics!
+</summary>
+        </member>
+        <member name="P:GTA.Ped.Enemy">
+            <summary>
+Sets whether the ped should be considered an enemy of the player.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.BlockPermanentEvents">
+            <summary>
+Sets whether permanent events - like responding to an aggressor - that may abort currently assigned tasks should be blocked.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.CurrentVehicle">
+            <summary>
+Gets the currently used vehicle of the ped. Returns Nothing when no vehicle is used.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.Euphoria">
+            <summary>
+Provides some easy to use Euphoria/NaturalMotion objects.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.Weapons">
+            <summary>
+Contains several classes to access weapon functionality.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.Animation">
+            <summary>
+Provides control over ped animations.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.Task">
+            <summary>
+Tasks control the behaviour of peds.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.isIdle">
+            <summary>
+Gets whether the ped is currently available for idle animations. Has some overhead, don't call it every frame.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.Armor">
+            <summary>
+Gets or sets the current health of the ped. 0 to 100 is the normal range.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.MaxHealth">
+            <summary>
+Gets or sets the maximum health for NPCs. Default is 100.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.Health">
+            <summary>
+Gets or sets the current health of the ped. 1 to 100 is the normal range. 
+Can be greater than 100 for Peds with incresed MaxHealth.
+-99 to 0 is injured. -100 is completely dead.
+</summary>
+        </member>
+        <member name="M:GTA.Ped.ApplyForceRelative(GTA.Vector3)">
+            <summary>
+Applies a force that is relative to the current orientation of the ped.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="M:GTA.Ped.ApplyForceRelative(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Applies a force that is relative to the current orientation of the ped.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="M:GTA.Ped.ApplyForce(GTA.Vector3)">
+            <summary>
+Applies a force given in world coordinates to the ped.
+</summary>
+        </member>
+        <member name="M:GTA.Ped.ApplyForce(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Applies a force given in world coordinates to the ped.
+</summary>
+        </member>
+        <member name="P:GTA.Ped.CurrentRoom">
+            <summary>
+Gets or sets the interior room the ped currently is at. It needs to be set correctly for the ped to be visible inside the room.
+</summary>
+        </member>
+        <member name="M:GTA.Object.GetOffsetPosition(GTA.Vector3)">
+            <summary>
+Returns the given offset in world coordinates.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="M:GTA.Object.ApplyForceRelative(GTA.Vector3)">
+            <summary>
+Applies a force that is relative to the current orientation of the object.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="M:GTA.Object.ApplyForceRelative(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Applies a force that is relative to the current orientation of the object.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="M:GTA.Object.ApplyForce(GTA.Vector3)">
+            <summary>
+Applies a force given in world coordinates to the object.
+</summary>
+        </member>
+        <member name="M:GTA.Object.ApplyForce(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Applies a force given in world coordinates to the object.
+</summary>
+        </member>
+        <member name="P:GTA.Object.CurrentRoom">
+            <summary>
+Gets or sets the interior room the object currently is at. It needs to be set correctly for the object to be visible inside the room.
+</summary>
+        </member>
+        <member name="M:GTA.Blip.GetAttachedItem">
+            <summary>
+Returns the item the Blip is attached to or Nothing/Null if it isn't attached to an item.
+</summary>
+        </member>
+        <member name="P:GTA.Forms.Form.Resources">
+            <summary>
+Allows access to resources embedded in the script
+</summary>
+        </member>
+        <member name="P:GTA.Forms.Control.Transparency">
+            <summary>
+Gets or sets the Alpha value of the BackColor property. Range from 0.0 (opaque) to 1.0 (invisible).
+</summary>
+        </member>
+        <member name="M:GTA.ObjectCollection.Convert``1(System.Int32)">
+            <summary>
+Tries to convert the parameter at the given index to type T.
+</summary>
+        </member>
+        <member name="M:GTA.ParameterCollection.ToString(System.Int32)">
+            <summary>
+Converts the parameter at the given index into a string.
+</summary>
+        </member>
+        <member name="M:GTA.ParameterCollection.ToModel(System.Int32)">
+            <summary>
+Converts the parameter at the given index into a model. It takes names, integers or hex values.
+</summary>
+        </member>
+        <member name="M:GTA.ParameterCollection.ToVector3(System.Int32)">
+            <summary>
+Converts the 3 parameters starting at the given index into a Vector3 value.
+</summary>
+        </member>
+        <member name="M:GTA.ParameterCollection.ToFloat(System.Int32)">
+            <summary>
+Converts the parameter at the given index into a float value.
+</summary>
+        </member>
+        <member name="M:GTA.ParameterCollection.ToInteger(System.Int32)">
+            <summary>
+Converts the parameter at the given index into an integer value.
+</summary>
+        </member>
+        <member name="P:GTA.KeyEventArgs.Alt">
+            <summary>
+Returns if the key was pressed in combination with Alt.
+</summary>
+        </member>
+        <member name="P:GTA.KeyEventArgs.Control">
+            <summary>
+Returns if the key was pressed in combination with Control.
+</summary>
+        </member>
+        <member name="P:GTA.KeyEventArgs.Shift">
+            <summary>
+Returns if the key was pressed in combination with Shift.
+</summary>
+        </member>
+        <member name="P:GTA.KeyEventArgs.KeyWithModifiers">
+            <summary>
+Returns the key combined with modifier (Shift, Control, Alt) information.
+</summary>
+        </member>
+        <member name="P:GTA.KeyEventArgs.Key">
+            <summary>
+Returns the key without any modifier information.
+</summary>
+        </member>
+        <member name="M:GTA.base.HandleObject.SetMetadata``1(System.String,System.Boolean,``0)">
+            <summary>
+Store Metadata for the object. Metadata can be read back as long as the object exists.
+</summary>
+            <param name="ValueName">Name of the Metadata to store.</param>
+            <param name="Global">Global Metadata is accessible by all scripts.</param>
+            <param name="Value">Value of the Metadata to store.</param>
+        </member>
+        <member name="M:GTA.base.HandleObject.HasMetadata(System.String)">
+            <summary>
+Checks if Metadata exists on the object. The Metadata may be local or global. Local Metadtata has preference.
+</summary>
+            <param name="ValueName">Name of the stored Metadata.</param>
+        </member>
+        <member name="M:GTA.base.HandleObject.HasMetadata(System.String,System.Boolean)">
+            <summary>
+Checks if explicit local OR global Metadata exists on the object.
+</summary>
+            <param name="ValueName">Name of the stored Metadata.</param>
+            <param name="Global">Global Metadata is accessible by all scripts.</param>
+        </member>
+        <member name="M:GTA.base.HandleObject.GetMetadata``1(System.String)">
+            <summary>
+Read Metadata from the object. The Metadata may be local or global. Local Metadtata has preference.
+</summary>
+            <param name="ValueName">Name of the stored Metadata.</param>
+        </member>
+        <member name="M:GTA.base.HandleObject.GetMetadata``1(System.String,System.Boolean)">
+            <summary>
+Read only explicit local OR global Metadata from the object.
+</summary>
+            <param name="ValueName">Name of the stored Metadata.</param>
+            <param name="Global">Global Metadata is accessible by all scripts.</param>
+        </member>
+        <member name="P:GTA.base.HandleObject.Metadata">
+            <summary>
+Allows you to store Metadata on an object. Metadata can be read back as long as the object exists. 
+Usage: object.Metadata.MyValueName = MyData
+</summary>
+            <param name="ValueName">Name of the stored Metadata.</param>
+        </member>
+        <member name="M:GTA.base.Object.Exists">
+            <summary>
+Returns whether the object still exists in game. Other calls to non-existing objects will result in an error. This function is FAST and is better checked too much rather than too less.
+</summary>
+        </member>
+        <member name="E:GTA.base.Object.CeasedToExist">
+            <summary>
+The event will be raised as soon as the object ceases to exist in game.
+</summary>
+        </member>
+        <member name="M:GTA.ImageInformation.Equals(GTA.ImageInformation@,GTA.ImageInformation@)">
+            <summary>
+Determines whether the specified object instances are considered equal. 
+</summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="value1" /> is the same instance as <paramref name="value2" /> or 
+if both are <c>null</c> references or if <c>value1.Equals(value2)</c> returns <c>true</c>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.ImageInformation.Equals(GTA.ImageInformation)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to the specified object. 
+</summary>
+            <param name="other">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.ImageInformation.Equals(System.Object)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to a specified object. 
+</summary>
+            <param name="obj">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.ImageInformation.GetHashCode">
+            <summary>
+Returns the hash code for this instance.
+</summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GTA.ImageInformation.op_Inequality(GTA.ImageInformation,GTA.ImageInformation)">
+            <summary>
+Tests for inequality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has a different value than <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.ImageInformation.op_Equality(GTA.ImageInformation,GTA.ImageInformation)">
+            <summary>
+Tests for equality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has the same value as <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.ImageInformation.FromMemory(System.Byte[])">
+            <summary>
+Retrieves information about an image from memory.
+</summary>
+            <param name="memory">A block of memory containing the image.</param>
+            <returns>Information about the image.</returns>
+        </member>
+        <member name="P:GTA.ImageInformation.ImageFileFormat">
+            <summary>
+The format of the image file.
+</summary>
+        </member>
+        <member name="P:GTA.ImageInformation.ResourceType">
+            <summary>
+The type of the texture stored in the file.
+</summary>
+        </member>
+        <member name="P:GTA.ImageInformation.Format">
+            <summary>
+The original format of the image.
+</summary>
+        </member>
+        <member name="P:GTA.ImageInformation.MipLevels">
+            <summary>
+Number of mip levels in the original image.
+</summary>
+        </member>
+        <member name="P:GTA.ImageInformation.Depth">
+            <summary>
+Depth of the original image, in pixels.
+</summary>
+        </member>
+        <member name="P:GTA.ImageInformation.Height">
+            <summary>
+Height of the original image, in pixels.
+</summary>
+        </member>
+        <member name="P:GTA.ImageInformation.Width">
+            <summary>
+Width of the original image, in pixels.
+</summary>
+        </member>
+        <member name="T:GTA.ImageInformation">
+            <summary>
+Contains the description of the contents of an image file.
+</summary>
+            <unmanaged>D3DXIMAGE_INFO</unmanaged>
+        </member>
+        <member name="M:GTA.Model.GetDimensions">
+            <summary>
+Returns the total dimensions of the model. X is width, Y is length, Z is height.
+</summary>
+        </member>
+        <member name="M:GTA.Model.GetDimensions(GTA.Vector3@,GTA.Vector3@)">
+            <summary>
+Returns the dimensions of the model as a 3D box defined by two vectors.
+Directions: positive X is right, positive Y is front, positive Z is Top 
+</summary>
+        </member>
+        <member name="P:GTA.Model.Null">
+            <summary>
+Returns an empty (NULL) model.
+</summary>
+        </member>
+        <member name="M:GTA.Matrix.Equals(GTA.Matrix@,GTA.Matrix@)">
+            <summary>
+Determines whether the specified object instances are considered equal. 
+</summary>
+            <param name="value1" />
+            <param name="value2" />
+            <returns>
+                <c>true</c> if <paramref name="value1" /> is the same instance as <paramref name="value2" /> or 
+if both are <c>null</c> references or if <c>value1.Equals(value2)</c> returns <c>true</c>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Equals(GTA.Matrix)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to the specified object. 
+</summary>
+            <param name="other">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Equals(System.Object)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to a specified object. 
+</summary>
+            <param name="obj">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Matrix.GetHashCode">
+            <summary>
+Returns the hash code for this instance.
+</summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GTA.Matrix.ToString">
+            <summary>
+Converts the value of the object to its equivalent string representation.
+</summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_Inequality(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Tests for inequality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has a different value than <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_Equality(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Tests for equality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has the same value as <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_Multiply(System.Single,GTA.Matrix)">
+            <summary>
+Scales a matrix by a given value.
+</summary>
+            <param name="right">The matrix to scale.</param>
+            <param name="left">The amount by which to scale.</param>
+            <returns>The scaled matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_Multiply(GTA.Matrix,System.Single)">
+            <summary>
+Scales a matrix by a given value.
+</summary>
+            <param name="left">The matrix to scale.</param>
+            <param name="right">The amount by which to scale.</param>
+            <returns>The scaled matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_Multiply(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Multiplies two matricies.
+</summary>
+            <param name="left">The first matrix to multiply.</param>
+            <param name="right">The second matrix to multiply.</param>
+            <returns>The product of the two matricies.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_Division(GTA.Matrix,System.Single)">
+            <summary>
+Scales a matrix by a given value.
+</summary>
+            <param name="left">The matrix to scale.</param>
+            <param name="right">The amount by which to scale.</param>
+            <returns>The scaled matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_Division(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Divides two matricies.
+</summary>
+            <param name="left">The first matrix to divide.</param>
+            <param name="right">The second matrix to divide.</param>
+            <returns>The quotient of the two matricies.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_Subtraction(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Subtracts two matricies.
+</summary>
+            <param name="left">The first matrix to subtract.</param>
+            <param name="right">The second matrix to subtract.</param>
+            <returns>The difference between the two matricies.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_Addition(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Adds two matricies.
+</summary>
+            <param name="left">The first matrix to add.</param>
+            <param name="right">The second matrix to add.</param>
+            <returns>The sum of the two matricies.</returns>
+        </member>
+        <member name="M:GTA.Matrix.op_UnaryNegation(GTA.Matrix)">
+            <summary>
+Negates a matrix.
+</summary>
+            <param name="matrix">The matrix to negate.</param>
+            <returns>The negated matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Transformation2D(GTA.Vector2,System.Single,GTA.Vector2,GTA.Vector2,System.Single,GTA.Vector2)">
+            <summary>
+Creates a 2D transformation matrix.
+</summary>
+            <param name="scalingCenter">Center point of the scaling operation.</param>
+            <param name="scalingRotation">Scaling rotation amount.</param>
+            <param name="scaling">Scaling factor.</param>
+            <param name="rotationCenter">The center of the rotation.</param>
+            <param name="rotation">The rotation of the transformation.</param>
+            <param name="translation">The translation factor of the transformation.</param>
+            <returns>The created transformation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Transformation(GTA.Vector3,GTA.Quaternion,GTA.Vector3,GTA.Vector3,GTA.Quaternion,GTA.Vector3)">
+            <summary>
+Creates a transformation matrix.
+</summary>
+            <param name="scalingCenter">Center point of the scaling operation.</param>
+            <param name="scalingRotation">Scaling rotation amount.</param>
+            <param name="scaling">Scaling factor.</param>
+            <param name="rotationCenter">The center of the rotation.</param>
+            <param name="rotation">The rotation of the transformation.</param>
+            <param name="translation">The translation factor of the transformation.</param>
+            <returns>The created transformation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.AffineTransformation2D(System.Single,GTA.Vector2,System.Single,GTA.Vector2)">
+            <summary>
+Creates a 2D affine transformation matrix.
+</summary>
+            <param name="scaling">Scaling factor.</param>
+            <param name="rotationCenter">The center of the rotation.</param>
+            <param name="rotation">The rotation of the transformation.</param>
+            <param name="translation">The translation factor of the transformation.</param>
+            <returns>The created affine transformation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.AffineTransformation(System.Single,GTA.Vector3,GTA.Quaternion,GTA.Vector3)">
+            <summary>
+Creates a 3D affine transformation matrix.
+</summary>
+            <param name="scaling">Scaling factor.</param>
+            <param name="rotationCenter">The center of the rotation.</param>
+            <param name="rotation">The rotation of the transformation.</param>
+            <param name="translation">The translation factor of the transformation.</param>
+            <returns>The created affine transformation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Transpose(GTA.Matrix)">
+            <summary>
+Calculates the transpose of the specified matrix.
+</summary>
+            <param name="matrix">The matrix whose transpose is to be calculated.</param>
+            <returns>The transpose of the specified matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Invert(GTA.Matrix)">
+            <summary>
+Calculates the inverse of the specified matrix.
+</summary>
+            <param name="matrix">The matrix whose inverse is to be calculated.</param>
+            <returns>The inverse of the specified matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Translation(GTA.Vector3)">
+            <summary>
+Creates a translation matrix using the specified offsets.
+</summary>
+            <param name="amount">The offset for all three coordinate planes.</param>
+            <returns>The created translation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Translation(System.Single,System.Single,System.Single)">
+            <summary>
+Creates a translation matrix using the specified offsets.
+</summary>
+            <param name="x">X-coordinate offset.</param>
+            <param name="y">Y-coordinate offset.</param>
+            <param name="z">Z-coordinate offset.</param>
+            <returns>The created translation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Scaling(GTA.Vector3)">
+            <summary>
+Creates a matrix that scales along the x-axis, y-axis, and y-axis.
+</summary>
+            <param name="scale">Scaling factor for all three axes.</param>
+            <returns>The created scaling matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Scaling(System.Single,System.Single,System.Single)">
+            <summary>
+Creates a matrix that scales along the x-axis, y-axis, and y-axis.
+</summary>
+            <param name="x">Scaling factor that is applied along the x-axis.</param>
+            <param name="y">Scaling factor that is applied along the y-axis.</param>
+            <param name="z">Scaling factor that is applied along the z-axis.</param>
+            <returns>The created scaling matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.PerspectiveRH(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+Creates a right-handed, perspective projection matrix.
+</summary>
+            <param name="width">Width of the viewing volume.</param>
+            <param name="height">Height of the viewing volume.</param>
+            <param name="znear">Minimum z-value of the viewing volume.</param>
+            <param name="zfar">Maximum z-value of the viewing volume.</param>
+            <returns>The created projection matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.PerspectiveLH(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+Creates a left-handed, perspective projection matrix.
+</summary>
+            <param name="width">Width of the viewing volume.</param>
+            <param name="height">Height of the viewing volume.</param>
+            <param name="znear">Minimum z-value of the viewing volume.</param>
+            <param name="zfar">Maximum z-value of the viewing volume.</param>
+            <returns>The created projection matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.OrthoRH(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+Creates a right-handed, orthographic projection matrix.
+</summary>
+            <param name="width">Width of the viewing volume.</param>
+            <param name="height">Height of the viewing volume.</param>
+            <param name="znear">Minimum z-value of the viewing volume.</param>
+            <param name="zfar">Maximum z-value of the viewing volume.</param>
+            <returns>The created projection matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.OrthoLH(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+Creates a left-handed, orthographic projection matrix.
+</summary>
+            <param name="width">Width of the viewing volume.</param>
+            <param name="height">Height of the viewing volume.</param>
+            <param name="znear">Minimum z-value of the viewing volume.</param>
+            <param name="zfar">Maximum z-value of the viewing volume.</param>
+            <returns>The created projection matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.LookAtRH(GTA.Vector3,GTA.Vector3,GTA.Vector3)">
+            <summary>
+Creates a right-handed, look-at matrix.
+</summary>
+            <param name="eye">The position of the viewer's eye.</param>
+            <param name="target">The camera look-at target.</param>
+            <param name="up">The camera's up vector.</param>
+            <returns>The created look-at matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.LookAtLH(GTA.Vector3,GTA.Vector3,GTA.Vector3)">
+            <summary>
+Creates a left-handed, look-at matrix.
+</summary>
+            <param name="eye">The position of the viewer's eye.</param>
+            <param name="target">The camera look-at target.</param>
+            <param name="up">The camera's up vector.</param>
+            <returns>The created look-at matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.RotationYawPitchRoll(System.Single,System.Single,System.Single)">
+            <summary>
+Creates a rotation matrix with a specified yaw, pitch, and roll.
+</summary>
+            <param name="yaw">Yaw around the y-axis, in radians.</param>
+            <param name="pitch">Pitch around the x-axis, in radians.</param>
+            <param name="roll">Roll around the z-axis, in radians.</param>
+            <returns>The created rotation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.RotationQuaternion(GTA.Quaternion)">
+            <summary>
+Creates a rotation matrix from a quaternion.
+</summary>
+            <param name="rotation">The quaternion to use to build the matrix.</param>
+            <returns>The created rotation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.RotationAxis(GTA.Vector3,System.Single)">
+            <summary>
+Creates a matrix that rotates around an arbitary axis.
+</summary>
+            <param name="axis">The axis around which to rotate.</param>
+            <param name="angle">Angle of rotation in radians. Angles are measured clockwise when looking along the rotation axis toward the origin.</param>
+            <returns>The created rotation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.RotationZ(System.Single)">
+            <summary>
+Creates a matrix that rotates around the z-axis.
+</summary>
+            <param name="angle">Angle of rotation in radians. Angles are measured clockwise when looking along the rotation axis toward the origin.</param>
+            <returns>The created rotation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.RotationY(System.Single)">
+            <summary>
+Creates a matrix that rotates around the y-axis.
+</summary>
+            <param name="angle">Angle of rotation in radians. Angles are measured clockwise when looking along the rotation axis toward the origin.</param>
+            <returns>The created rotation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.RotationX(System.Single)">
+            <summary>
+Creates a matrix that rotates around the x-axis.
+</summary>
+            <param name="angle">Angle of rotation in radians. Angles are measured clockwise when looking along the rotation axis toward the origin.</param>
+            <returns>The created rotation matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Billboard(GTA.Vector3,GTA.Vector3,GTA.Vector3,GTA.Vector3)">
+            <summary>
+Creates a spherical billboard that rotates around a specified object position.
+</summary>
+            <param name="objectPosition">The position of the object around which the billboard will rotate.</param>
+            <param name="cameraPosition">The position of the camera.</param>
+            <param name="cameraUpVector">The up vector of the camera.</param>
+            <param name="cameraForwardVector">The forward vector of the camera.</param>
+            <returns>The created billboard matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Lerp(GTA.Matrix,GTA.Matrix,System.Single)">
+            <summary>
+Performs a linear interpolation between two matricies.
+</summary>
+            <param name="start">Start matrix.</param>
+            <param name="end">End matrix.</param>
+            <param name="amount">Value between 0 and 1 indicating the weight of <paramref name="end" />.</param>
+            <returns>The linear interpolation of the two matrices.</returns>
+            <remarks>
+This method performs the linear interpolation based on the following formula.
+<code>start + (end - start) * amount</code>
+Passing <paramref name="amount" /> a value of 0 will cause <paramref name="start" /> to be returned; a value of 1 will cause <paramref name="end" /> to be returned. 
+</remarks>
+        </member>
+        <member name="M:GTA.Matrix.Negate(GTA.Matrix)">
+            <summary>
+Negates a matrix.
+</summary>
+            <param name="matrix">The matrix to be negated.</param>
+            <returns>The negated matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Divide(GTA.Matrix,System.Single)">
+            <summary>
+Scales a matrix by the given value.
+</summary>
+            <param name="left">The matrix to scale.</param>
+            <param name="right">The amount by which to scale.</param>
+            <returns>The scaled matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Divide(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Determines the quotient of two matrices.
+</summary>
+            <param name="left">The first matrix to divide.</param>
+            <param name="right">The second matrix to divide.</param>
+            <returns>The quotient of the two matrices.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Multiply(GTA.Matrix,System.Single)">
+            <summary>
+Scales a matrix by the given value.
+</summary>
+            <param name="left">The matrix to scale.</param>
+            <param name="right">The amount by which to scale.</param>
+            <returns>The scaled matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Multiply(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Determines the product of two matrices.
+</summary>
+            <param name="left">The first matrix to multiply.</param>
+            <param name="right">The second matrix to multiply.</param>
+            <returns>The product of the two matrices.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Subtract(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Determines the difference between two matrices.
+</summary>
+            <param name="left">The first matrix to subtract.</param>
+            <param name="right">The second matrix to subtract.</param>
+            <returns>The difference between the two matrices.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Add(GTA.Matrix,GTA.Matrix)">
+            <summary>
+Determines the sum of two matrices.
+</summary>
+            <param name="left">The first matrix to add.</param>
+            <param name="right">The second matrix to add.</param>
+            <returns>The sum of the two matrices.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Determinant">
+            <summary>
+Calculates the determinant of the matrix.
+</summary>
+            <returns>The determinant of the matrix.</returns>
+        </member>
+        <member name="M:GTA.Matrix.Invert">
+            <summary>
+Inverts the matrix.
+</summary>
+        </member>
+        <member name="P:GTA.Matrix.IsIdentity">
+            <summary>
+Gets a value indicating whether this instance is an identity matrix.
+</summary>
+        </member>
+        <member name="P:GTA.Matrix.Identity">
+            <summary>
+Gets a <see cref="T:GTA.Matrix" /> that represents an identity matrix.
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M44">
+            <summary>
+Gets or sets the element of the matrix that exists in the fourth row and fourth column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M43">
+            <summary>
+Gets or sets the element of the matrix that exists in the fourth row and third column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M42">
+            <summary>
+Gets or sets the element of the matrix that exists in the fourth row and second column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M41">
+            <summary>
+Gets or sets the element of the matrix that exists in the fourth row and first column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M34">
+            <summary>
+Gets or sets the element of the matrix that exists in the third row and fourth column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M33">
+            <summary>
+Gets or sets the element of the matrix that exists in the third row and third column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M32">
+            <summary>
+Gets or sets the element of the matrix that exists in the third row and second column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M31">
+            <summary>
+Gets or sets the element of the matrix that exists in the third row and first column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M24">
+            <summary>
+Gets or sets the element of the matrix that exists in the second row and fourth column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M23">
+            <summary>
+Gets or sets the element of the matrix that exists in the second row and third column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M22">
+            <summary>
+Gets or sets the element of the matrix that exists in the second row and second column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M21">
+            <summary>
+Gets or sets the element of the matrix that exists in the second row and first column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M14">
+            <summary>
+Gets or sets the element of the matrix that exists in the first row and fourth column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M13">
+            <summary>
+Gets or sets the element of the matrix that exists in the first row and third column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M12">
+            <summary>
+Gets or sets the element of the matrix that exists in the first row and second column. 
+</summary>
+        </member>
+        <member name="F:GTA.Matrix.M11">
+            <summary>
+Gets or sets the element of the matrix that exists in the first row and first column. 
+</summary>
+        </member>
+        <member name="T:GTA.Matrix">
+            <summary>
+Defines a 4x4 matrix.
+</summary>
+            <unmanaged>D3DXMATRIX</unmanaged>
+        </member>
+        <member name="M:GTA.Quaternion.Equals(GTA.Quaternion@,GTA.Quaternion@)">
+            <summary>
+Determines whether the specified object instances are considered equal. 
+</summary>
+            <param name="value1" />
+            <param name="value2" />
+            <returns>
+                <c>true</c> if <paramref name="value1" /> is the same instance as <paramref name="value2" /> or 
+if both are <c>null</c> references or if <c>value1.Equals(value2)</c> returns <c>true</c>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Equals(GTA.Quaternion)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to the specified object. 
+</summary>
+            <param name="other">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Equals(System.Object)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to a specified object. 
+</summary>
+            <param name="obj">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.GetHashCode">
+            <summary>
+Returns the hash code for this instance.
+</summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.ToString">
+            <summary>
+Converts the value of the object to its equivalent string representation.
+</summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.op_Inequality(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Tests for inequality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has a different value than <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.op_Equality(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Tests for equality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has the same value as <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.op_UnaryNegation(GTA.Quaternion)">
+            <summary>
+Reverses the direction of a given quaternion.
+</summary>
+            <param name="quaternion">The quaternion to negate.</param>
+            <returns>A quaternion facing in the opposite direction.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.op_Subtraction(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Subtracts two quaternions.
+</summary>
+            <param name="left">The first quaternion to subtract.</param>
+            <param name="right">The second quaternion to subtract.</param>
+            <returns>The difference of the two quaternions.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.op_Addition(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Adds two quaternions.
+</summary>
+            <param name="left">The first quaternion to add.</param>
+            <param name="right">The second quaternion to add.</param>
+            <returns>The sum of the two quaternions.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.op_Division(GTA.Quaternion,System.Single)">
+            <summary>
+Divides a quaternion by another.
+</summary>
+            <param name="left">The first quaternion to divide.</param>
+            <param name="right">The second quaternion to divide.</param>
+            <returns>The divided quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.op_Multiply(System.Single,GTA.Quaternion)">
+            <summary>
+Scales a quaternion by the given value.
+</summary>
+            <param name="quaternion">The quaternion to scale.</param>
+            <param name="scale">The amount by which to scale the quaternion.</param>
+            <returns>The scaled quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.op_Multiply(GTA.Quaternion,System.Single)">
+            <summary>
+Scales a quaternion by the given value.
+</summary>
+            <param name="quaternion">The quaternion to scale.</param>
+            <param name="scale">The amount by which to scale the quaternion.</param>
+            <returns>The scaled quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.op_Multiply(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Multiplies a quaternion by another.
+</summary>
+            <param name="left">The first quaternion to multiply.</param>
+            <param name="right">The second quaternion to multiply.</param>
+            <returns>The multiplied quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Subtract(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Subtracts two quaternions.
+</summary>
+            <param name="left">The first quaternion to subtract.</param>
+            <param name="right">The second quaternion to subtract.</param>
+            <returns>The difference of the two quaternions.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.RotationYawPitchRoll(System.Single,System.Single,System.Single)">
+            <summary>
+Creates a quaternion given a yaw, pitch, and roll value.
+</summary>
+            <param name="yaw">The yaw of rotation.</param>
+            <param name="pitch">The pitch of rotation.</param>
+            <param name="roll">The roll of rotation.</param>
+            <returns>The newly created quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.RotationMatrix(GTA.Matrix)">
+            <summary>
+Creates a quaternion given a rotation matrix.
+</summary>
+            <param name="matrix">The rotation matrix.</param>
+            <returns>The newly created quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.RotationAxis(GTA.Vector3,System.Single)">
+            <summary>
+Creates a quaternion given a rotation and an axis.
+</summary>
+            <param name="axis">The axis of rotation.</param>
+            <param name="angle">The angle of rotation.</param>
+            <returns>The newly created quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Normalize(GTA.Quaternion)">
+            <summary>
+Converts the quaternion into a unit quaternion.
+</summary>
+            <param name="quaternion">The quaternion to normalize.</param>
+            <returns>The normalized quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Negate(GTA.Quaternion)">
+            <summary>
+Reverses the direction of a given quaternion.
+</summary>
+            <param name="quaternion">The quaternion to negate.</param>
+            <returns>A quaternion facing in the opposite direction.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Multiply(GTA.Quaternion,System.Single)">
+            <summary>
+Scales a quaternion by the given value.
+</summary>
+            <param name="quaternion">The quaternion to scale.</param>
+            <param name="scale">The amount by which to scale the quaternion.</param>
+            <returns>The scaled quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Multiply(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Modulates a quaternion by another.
+</summary>
+            <param name="left">The first quaternion to modulate.</param>
+            <param name="right">The second quaternion to modulate.</param>
+            <returns>The modulated quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Lerp(GTA.Quaternion,GTA.Quaternion,System.Single)">
+            <summary>
+Performs a linear interpolation between two quaternion.
+</summary>
+            <param name="start">Start quaternion.</param>
+            <param name="end">End quaternion.</param>
+            <param name="amount">Value between 0 and 1 indicating the weight of <paramref name="end" />.</param>
+            <returns>The linear interpolation of the two quaternions.</returns>
+            <remarks>
+This method performs the linear interpolation based on the following formula.
+<code>start + (end - start) * amount</code>
+Passing <paramref name="amount" /> a value of 0 will cause <paramref name="start" /> to be returned; a value of 1 will cause <paramref name="end" /> to be returned. 
+</remarks>
+        </member>
+        <member name="M:GTA.Quaternion.Invert(GTA.Quaternion)">
+            <summary>
+Conjugates and renormalizes the quaternion.
+</summary>
+            <param name="quaternion">The quaternion to conjugate and renormalize.</param>
+            <returns>The conjugated and renormalized quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Dot(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Calculates the dot product of two quaternions.
+</summary>
+            <param name="left">First source quaternion.</param>
+            <param name="right">Second source quaternion.</param>
+            <returns>The dot product of the two quaternions.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Divide(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Divides a quaternion by another.
+</summary>
+            <param name="left">The first quaternion to divide.</param>
+            <param name="right">The second quaternion to divide.</param>
+            <returns>The divided quaternion.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Add(GTA.Quaternion,GTA.Quaternion)">
+            <summary>
+Adds two quaternions.
+</summary>
+            <param name="left">The first quaternion to add.</param>
+            <param name="right">The second quaternion to add.</param>
+            <returns>The sum of the two quaternions.</returns>
+        </member>
+        <member name="M:GTA.Quaternion.Invert">
+            <summary>
+Conjugates and renormalizes the quaternion.
+</summary>
+        </member>
+        <member name="M:GTA.Quaternion.Conjugate">
+            <summary>
+Conjugates the quaternion.
+</summary>
+        </member>
+        <member name="M:GTA.Quaternion.Normalize">
+            <summary>
+Converts the quaternion into a unit quaternion.
+</summary>
+        </member>
+        <member name="M:GTA.Quaternion.Length">
+            <summary>
+Calculates the length of the quaternion.
+</summary>
+            <returns>The length of the quaternion.</returns>
+        </member>
+        <member name="P:GTA.Quaternion.Angle">
+            <summary>
+Gets the angle of the quaternion.
+</summary>
+        </member>
+        <member name="P:GTA.Quaternion.Axis">
+            <summary>
+Gets the axis components of the quaternion.
+</summary>
+        </member>
+        <member name="P:GTA.Quaternion.Identity">
+            <summary>
+Gets the identity <see cref="T:GTA.Quaternion" /> (0, 0, 0, 1).
+</summary>
+        </member>
+        <member name="M:GTA.Quaternion.#ctor(GTA.Vector3,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Quaternion" /> structure.
+</summary>
+            <param name="value">A <see cref="T:GTA.Vector3" /> containing the first three values of the quaternion.</param>
+            <param name="w">The W component of the quaternion.</param>
+        </member>
+        <member name="M:GTA.Quaternion.#ctor(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Quaternion" /> structure.
+</summary>
+            <param name="x">The X component of the quaternion.</param>
+            <param name="y">The Y component of the quaternion.</param>
+            <param name="z">The Z component of the quaternion.</param>
+            <param name="w">The W component of the quaternion.</param>
+        </member>
+        <member name="F:GTA.Quaternion.W">
+            <summary>
+Gets or sets the W component of the quaternion.
+</summary>
+            <value>The W component of the quaternion.</value>
+        </member>
+        <member name="F:GTA.Quaternion.Z">
+            <summary>
+Gets or sets the Z component of the quaternion.
+</summary>
+            <value>The Z component of the quaternion.</value>
+        </member>
+        <member name="F:GTA.Quaternion.Y">
+            <summary>
+Gets or sets the Y component of the quaternion.
+</summary>
+            <value>The Y component of the quaternion.</value>
+        </member>
+        <member name="F:GTA.Quaternion.X">
+            <summary>
+Gets or sets the X component of the quaternion.
+</summary>
+            <value>The X component of the quaternion.</value>
+        </member>
+        <member name="P:GTA.Vector3.RelativeBottom">
+            <summary>
+Returns the relative Bottom vector as used. (0,0,-1)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.RelativeTop">
+            <summary>
+Returns the relative Top vector. (0,0,1)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.RelativeBack">
+            <summary>
+Returns the relative Back vector. (0,-1,0)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.RelativeFront">
+            <summary>
+Returns the relative Front vector. (0,1,0)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.RelativeLeft">
+            <summary>
+Returns the relative Left vector. (-1,0,0)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.RelativeRight">
+            <summary>
+Returns the relative Right vector. (1,0,0)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.WorldWest">
+            <summary>
+Returns the world West vector. (-1,0,0)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.WorldEast">
+            <summary>
+Returns the world East vector. (1,0,0)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.WorldSouth">
+            <summary>
+Returns the world South vector. (0,-1,0)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.WorldNorth">
+            <summary>
+Returns the world North vector. (0,1,0)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.WorldDown">
+            <summary>
+Returns the world Down vector. (0,0,-1)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.WorldUp">
+            <summary>
+Returns the world Up vector. (0,0,1)
+</summary>
+        </member>
+        <member name="P:GTA.Vector3.Zero">
+            <summary>
+Returns a null vector. (0,0,0)
+</summary>
+        </member>
+        <member name="M:GTA.Vector3.Around(System.Single)">
+            <summary>
+Returns a random location somewhere around this position.
+</summary>
+        </member>
+        <member name="M:GTA.Vector3.Equals(GTA.Vector3@,GTA.Vector3@)">
+            <summary>
+Determines whether the specified object instances are considered equal. 
+</summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="value1" /> is the same instance as <paramref name="value2" /> or 
+if both are <c>null</c> references or if <c>value1.Equals(value2)</c> returns <c>true</c>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Equals(GTA.Vector3)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to the specified object. 
+</summary>
+            <param name="other">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Equals(System.Object)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to a specified object. 
+</summary>
+            <param name="obj">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Vector3.GetHashCode">
+            <summary>
+Returns the hash code for this instance.
+</summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GTA.Vector3.ToString">
+            <summary>
+Converts the value of the object to its equivalent string representation.
+</summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:GTA.Vector3.op_Inequality(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Tests for inequality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has a different value than <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Vector3.op_Equality(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Tests for equality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has the same value as <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Vector3.op_Division(GTA.Vector3,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="vector">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector3.op_Multiply(System.Single,GTA.Vector3)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="vector">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector3.op_Multiply(GTA.Vector3,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="vector">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector3.op_UnaryNegation(GTA.Vector3)">
+            <summary>
+Reverses the direction of a given vector.
+</summary>
+            <param name="value">The vector to negate.</param>
+            <returns>A vector facing in the opposite direction.</returns>
+        </member>
+        <member name="M:GTA.Vector3.op_Subtraction(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Subtracts two vectors.
+</summary>
+            <param name="left">The first vector to subtract.</param>
+            <param name="right">The second vector to subtract.</param>
+            <returns>The difference of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector3.op_Addition(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Adds two vectors.
+</summary>
+            <param name="left">The first vector to add.</param>
+            <param name="right">The second vector to add.</param>
+            <returns>The sum of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Maximize(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Returns a vector containing the largest components of the specified vectors.
+</summary>
+            <param name="value1">The first source vector.</param>
+            <param name="value2">The second source vector.</param>
+            <returns>A vector containing the largest components of the source vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Minimize(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Returns a vector containing the smallest components of the specified vectors.
+</summary>
+            <param name="value1">The first source vector.</param>
+            <param name="value2">The second source vector.</param>
+            <returns>A vector containing the smallest components of the source vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Unproject(GTA.Vector3,System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,GTA.Matrix)">
+            <summary>
+Projects a 3D vector from screen space into object space. 
+</summary>
+            <param name="vector">The vector to project.</param>
+            <param name="x">The X position of the viewport.</param>
+            <param name="y">The Y position of the viewport.</param>
+            <param name="width">The width of the viewport.</param>
+            <param name="height">The height of the viewport.</param>
+            <param name="minZ">The minimum depth of the viewport.</param>
+            <param name="maxZ">The maximum depth of the viewport.</param>
+            <param name="worldViewProjection">The combined world-view-projection matrix.</param>
+            <returns>The vector in object space.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Project(GTA.Vector3,System.Int32,System.Int32,System.Int32,System.Int32,System.Single,System.Single,GTA.Matrix)">
+            <summary>
+Projects a 3D vector from object space into screen space. 
+</summary>
+            <param name="vector">The vector to project.</param>
+            <param name="x">The X position of the viewport.</param>
+            <param name="y">The Y position of the viewport.</param>
+            <param name="width">The width of the viewport.</param>
+            <param name="height">The height of the viewport.</param>
+            <param name="minZ">The minimum depth of the viewport.</param>
+            <param name="maxZ">The maximum depth of the viewport.</param>
+            <param name="worldViewProjection">The combined world-view-projection matrix.</param>
+            <returns>The vector in screen space.</returns>
+        </member>
+        <member name="M:GTA.Vector3.TransformNormal(GTA.Vector3,GTA.Matrix)">
+            <summary>
+Performs a normal transformation using the given <see cref="T:GTA.Matrix" />.
+</summary>
+            <param name="normal">The normal vector to transform.</param>
+            <param name="transformation">The transformation <see cref="T:GTA.Matrix" />.</param>
+            <returns>The transformed normal.</returns>
+        </member>
+        <member name="M:GTA.Vector3.TransformCoordinate(GTA.Vector3,GTA.Matrix)">
+            <summary>
+Performs a coordinate transformation using the given <see cref="T:GTA.Matrix" />.
+</summary>
+            <param name="coordinate">The coordinate vector to transform.</param>
+            <param name="transformation">The transformation <see cref="T:GTA.Matrix" />.</param>
+            <returns>The transformed coordinates.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Transform(GTA.Vector3,GTA.Quaternion)">
+            <summary>
+Transforms a 3D vector by the given <see cref="T:GTA.Quaternion" /> rotation.
+</summary>
+            <param name="vector">The vector to rotate.</param>
+            <param name="rotation">The <see cref="T:GTA.Quaternion" /> rotation to apply.</param>
+            <returns>The transformed <see cref="T:GTA.Vector4" />.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Transform(GTA.Vector3,GTA.Matrix)">
+            <summary>
+Transforms a 3D vector by the given <see cref="T:GTA.Matrix" />.
+</summary>
+            <param name="vector">The source vector.</param>
+            <param name="transformation">The transformation <see cref="T:GTA.Matrix" />.</param>
+            <returns>The transformed <see cref="T:GTA.Vector4" />.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Reflect(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Returns the reflection of a vector off a surface that has the specified normal. 
+</summary>
+            <param name="vector">The source vector.</param>
+            <param name="normal">Normal of the surface.</param>
+            <returns>The reflected vector.</returns>
+            <remarks>Reflect only gives the direction of a reflection off a surface, it does not determine 
+whether the original vector was close enough to the surface to hit it.</remarks>
+        </member>
+        <member name="M:GTA.Vector3.Cross(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Calculates the cross product of two vectors.
+</summary>
+            <param name="left">First source vector.</param>
+            <param name="right">Second source vector.</param>
+            <returns>The cross product of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Dot(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Calculates the dot product of two vectors.
+</summary>
+            <param name="left">First source vector.</param>
+            <param name="right">Second source vector.</param>
+            <returns>The dot product of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Normalize(GTA.Vector3)">
+            <summary>
+Converts the vector into a unit vector.
+</summary>
+            <param name="vector">The vector to normalize.</param>
+            <returns>The normalized vector.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Lerp(GTA.Vector3,GTA.Vector3,System.Single)">
+            <summary>
+Performs a linear interpolation between two vectors.
+</summary>
+            <param name="start">Start vector.</param>
+            <param name="end">End vector.</param>
+            <param name="amount">Value between 0 and 1 indicating the weight of <paramref name="end" />.</param>
+            <returns>The linear interpolation of the two vectors.</returns>
+            <remarks>
+This method performs the linear interpolation based on the following formula.
+<code>start + (end - start) * amount</code>
+Passing <paramref name="amount" /> a value of 0 will cause <paramref name="start" /> to be returned; a value of 1 will cause <paramref name="end" /> to be returned. 
+</remarks>
+        </member>
+        <member name="M:GTA.Vector3.Clamp(GTA.Vector3,GTA.Vector3,GTA.Vector3)">
+            <summary>
+Restricts a value to be within a specified range.
+</summary>
+            <param name="value">The value to clamp.</param>
+            <param name="min">The minimum value.</param>
+            <param name="max">The maximum value.</param>
+            <returns>The clamped value.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Negate(GTA.Vector3)">
+            <summary>
+Reverses the direction of a given vector.
+</summary>
+            <param name="value">The vector to negate.</param>
+            <returns>A vector facing in the opposite direction.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Divide(GTA.Vector3,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="value">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Modulate(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Modulates a vector by another.
+</summary>
+            <param name="left">The first vector to modulate.</param>
+            <param name="right">The second vector to modulate.</param>
+            <returns>The modulated vector.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Multiply(GTA.Vector3,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="value">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Subtract(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Subtracts two vectors.
+</summary>
+            <param name="left">The first vector to subtract.</param>
+            <param name="right">The second vector to subtract.</param>
+            <returns>The difference of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Add(GTA.Vector3,GTA.Vector3)">
+            <summary>
+Adds two vectors.
+</summary>
+            <param name="left">The first vector to add.</param>
+            <param name="right">The second vector to add.</param>
+            <returns>The sum of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector3.Normalize">
+            <summary>
+Converts the vector into a unit vector.
+</summary>
+        </member>
+        <member name="M:GTA.Vector3.Length">
+            <summary>
+Calculates the length of the vector.
+</summary>
+            <returns>The length of the vector.</returns>
+        </member>
+        <member name="M:GTA.Vector3.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Vector3" /> class.
+</summary>
+            <param name="x">Initial value for the X component of the vector.</param>
+            <param name="y">Initial value for the Y component of the vector.</param>
+            <param name="z">Initial value for the Z component of the vector.</param>
+        </member>
+        <member name="M:GTA.Vector3.#ctor(GTA.Vector2,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Vector3" /> class.
+</summary>
+            <param name="value">A vector containing the values with which to initialize the X and Y components</param>
+            <param name="z">Initial value for the Z component of the vector.</param>
+        </member>
+        <member name="F:GTA.Vector3.Z">
+            <summary>
+Gets or sets the Z component of the vector.
+</summary>
+            <value>The Z component of the vector.</value>
+        </member>
+        <member name="F:GTA.Vector3.Y">
+            <summary>
+Gets or sets the Y component of the vector.
+</summary>
+            <value>The Y component of the vector.</value>
+        </member>
+        <member name="F:GTA.Vector3.X">
+            <summary>
+Gets or sets the X component of the vector.
+</summary>
+            <value>The X component of the vector.</value>
+        </member>
+        <member name="M:GTA.Vector3.LengthSquared">
+            <summary>
+Calculates the squared length of the vector.
+</summary>
+            <returns>The squared length of the vector.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Equals(GTA.Vector2@,GTA.Vector2@)">
+            <summary>
+Determines whether the specified object instances are considered equal. 
+</summary>
+            <param name="value1">The first value to compare.</param>
+            <param name="value2">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="value1" /> is the same instance as <paramref name="value2" /> or 
+if both are <c>null</c> references or if <c>value1.Equals(value2)</c> returns <c>true</c>; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Equals(GTA.Vector2)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to the specified object. 
+</summary>
+            <param name="other">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Equals(System.Object)">
+            <summary>
+Returns a value that indicates whether the current instance is equal to a specified object. 
+</summary>
+            <param name="obj">Object to make the comparison with.</param>
+            <returns>
+                <c>true</c> if the current instance is equal to the specified object; <c>false</c> otherwise.</returns>
+        </member>
+        <member name="M:GTA.Vector2.GetHashCode">
+            <summary>
+Returns the hash code for this instance.
+</summary>
+            <returns>A 32-bit signed integer hash code.</returns>
+        </member>
+        <member name="M:GTA.Vector2.ToString">
+            <summary>
+Converts the value of the object to its equivalent string representation.
+</summary>
+            <returns>The string representation of the value of this instance.</returns>
+        </member>
+        <member name="M:GTA.Vector2.op_Inequality(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Tests for inequality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has a different value than <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Vector2.op_Equality(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Tests for equality between two objects.
+</summary>
+            <param name="left">The first value to compare.</param>
+            <param name="right">The second value to compare.</param>
+            <returns>
+                <c>true</c> if <paramref name="left" /> has the same value as <paramref name="right" />; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:GTA.Vector2.op_Division(GTA.Vector2,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="vector">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector2.op_Multiply(System.Single,GTA.Vector2)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="vector">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector2.op_Multiply(GTA.Vector2,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="vector">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector2.op_UnaryNegation(GTA.Vector2)">
+            <summary>
+Reverses the direction of a given vector.
+</summary>
+            <param name="value">The vector to negate.</param>
+            <returns>A vector facing in the opposite direction.</returns>
+        </member>
+        <member name="M:GTA.Vector2.op_Subtraction(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Subtracts two vectors.
+</summary>
+            <param name="left">The first vector to subtract.</param>
+            <param name="right">The second vector to subtract.</param>
+            <returns>The difference of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector2.op_Addition(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Adds two vectors.
+</summary>
+            <param name="left">The first vector to add.</param>
+            <param name="right">The second vector to add.</param>
+            <returns>The sum of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Maximize(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Returns a vector containing the largest components of the specified vectors.
+</summary>
+            <param name="value1">The first source vector.</param>
+            <param name="value2">The second source vector.</param>
+            <returns>A vector containing the largest components of the source vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Minimize(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Returns a vector containing the smallest components of the specified vectors.
+</summary>
+            <param name="value1">The first source vector.</param>
+            <param name="value2">The second source vector.</param>
+            <returns>A vector containing the smallest components of the source vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector2.TransformNormal(GTA.Vector2,GTA.Matrix)">
+            <summary>
+Performs a normal transformation using the given <see cref="T:GTA.Matrix" />.
+</summary>
+            <param name="normal">The normal vector to transform.</param>
+            <param name="transformation">The transformation <see cref="T:GTA.Matrix" />.</param>
+            <returns>The transformed normal.</returns>
+        </member>
+        <member name="M:GTA.Vector2.TransformCoordinate(GTA.Vector2,GTA.Matrix)">
+            <summary>
+Performs a coordinate transformation using the given <see cref="T:GTA.Matrix" />.
+</summary>
+            <param name="coordinate">The coordinate vector to transform.</param>
+            <param name="transformation">The transformation <see cref="T:GTA.Matrix" />.</param>
+            <returns>The transformed coordinates.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Transform(GTA.Vector2,GTA.Quaternion)">
+            <summary>
+Transforms a 2D vector by the given <see cref="T:GTA.Quaternion" /> rotation.
+</summary>
+            <param name="vector">The vector to rotate.</param>
+            <param name="rotation">The <see cref="T:GTA.Quaternion" /> rotation to apply.</param>
+            <returns>The transformed <see cref="T:GTA.Vector4" />.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Transform(GTA.Vector2,GTA.Matrix)">
+            <summary>
+Transforms a 2D vector by the given <see cref="T:GTA.Matrix" />.
+</summary>
+            <param name="vector">The source vector.</param>
+            <param name="transformation">The transformation <see cref="T:GTA.Matrix" />.</param>
+            <returns>The transformed <see cref="T:GTA.Vector4" />.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Normalize(GTA.Vector2)">
+            <summary>
+Converts the vector into a unit vector.
+</summary>
+            <param name="vector">The vector to normalize.</param>
+            <returns>The normalized vector.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Dot(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Calculates the dot product of two vectors.
+</summary>
+            <param name="left">First source vector.</param>
+            <param name="right">Second source vector.</param>
+            <returns>The dot product of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Distance(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Calculates the distance between two vectors.
+</summary>
+            <param name="value1">The first vector.</param>
+            <param name="value2">The second vector.</param>
+            <returns>The distance between the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Lerp(GTA.Vector2,GTA.Vector2,System.Single)">
+            <summary>
+Performs a linear interpolation between two vectors.
+</summary>
+            <param name="start">Start vector.</param>
+            <param name="end">End vector.</param>
+            <param name="amount">Value between 0 and 1 indicating the weight of <paramref name="end" />.</param>
+            <returns>The linear interpolation of the two vectors.</returns>
+            <remarks>
+This method performs the linear interpolation based on the following formula.
+<code>start + (end - start) * amount</code>
+Passing <paramref name="amount" /> a value of 0 will cause <paramref name="start" /> to be returned; a value of 1 will cause <paramref name="end" /> to be returned. 
+</remarks>
+        </member>
+        <member name="M:GTA.Vector2.Clamp(GTA.Vector2,GTA.Vector2,GTA.Vector2)">
+            <summary>
+Restricts a value to be within a specified range.
+</summary>
+            <param name="value">The value to clamp.</param>
+            <param name="min">The minimum value.</param>
+            <param name="max">The maximum value.</param>
+            <returns>The clamped value.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Negate(GTA.Vector2)">
+            <summary>
+Reverses the direction of a given vector.
+</summary>
+            <param name="value">The vector to negate.</param>
+            <returns>A vector facing in the opposite direction.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Divide(GTA.Vector2,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="value">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Modulate(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Modulates a vector by another.
+</summary>
+            <param name="left">The first vector to modulate.</param>
+            <param name="right">The second vector to modulate.</param>
+            <returns>The modulated vector.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Multiply(GTA.Vector2,System.Single)">
+            <summary>
+Scales a vector by the given value.
+</summary>
+            <param name="value">The vector to scale.</param>
+            <param name="scale">The amount by which to scale the vector.</param>
+            <returns>The scaled vector.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Subtract(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Subtracts two vectors.
+</summary>
+            <param name="left">The first vector to subtract.</param>
+            <param name="right">The second vector to subtract.</param>
+            <returns>The difference of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Add(GTA.Vector2,GTA.Vector2)">
+            <summary>
+Adds two vectors.
+</summary>
+            <param name="left">The first vector to add.</param>
+            <param name="right">The second vector to add.</param>
+            <returns>The sum of the two vectors.</returns>
+        </member>
+        <member name="M:GTA.Vector2.Normalize">
+            <summary>
+Converts the vector into a unit vector.
+</summary>
+        </member>
+        <member name="M:GTA.Vector2.Length">
+            <summary>
+Calculates the length of the vector.
+</summary>
+            <returns>The length of the vector.</returns>
+        </member>
+        <member name="M:GTA.Vector2.#ctor(System.Single,System.Single)">
+            <summary>
+Initializes a new instance of the <see cref="T:GTA.Vector2" /> class.
+</summary>
+            <param name="x">Initial value for the X component of the vector.</param>
+            <param name="y">Initial value for the Y component of the vector.</param>
+        </member>
+        <member name="F:GTA.Vector2.Y">
+            <summary>
+Gets or sets the Y component of the vector.
+</summary>
+            <value>The Y component of the vector.</value>
+        </member>
+        <member name="F:GTA.Vector2.X">
+            <summary>
+Gets or sets the X component of the vector.
+</summary>
+            <value>The X component of the vector.</value>
+        </member>
+        <member name="T:GTA.Vector2">
+            <summary>
+Defines a two component vector.
+</summary>
+            <unmanaged>D3DXVECTOR2</unmanaged>
+        </member>
+        <member name="T:GTA.VertexFormat">
+            <summary>
+Specifies codes that can be used to define Flexible-Vertex-Formats (FVF).
+</summary>
+            <unmanaged>D3DFVF</unmanaged>
+        </member>
+        <member name="F:GTA.VertexFormat.LastBetaColor">
+            <summary>
+The last beta field in the vertex position data will be of type Color. The data in the beta 
+fields are used with matrix palette skinning to specify matrix indices.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.LastBetaUByte4">
+            <summary>
+The last beta field in the vertex position data will be of type UByte4. The data in the beta 
+fields are used with matrix palette skinning to specify matrix indices.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.TextureCountShift">
+            <summary>
+The number of bits by which to shift an integer value that identifies the number of texture 
+coordinates for a vertex.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.TextureCountMask">
+            <summary>
+Mask for texture flag bits.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PositionMask">
+            <summary>
+Mask for position bits.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Texture8">
+            <summary>
+Vertex format contains 8 texture coordinate sets.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Texture7">
+            <summary>
+Vertex format contains 7 texture coordinate sets.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Texture6">
+            <summary>
+Vertex format contains 6 texture coordinate sets.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Texture5">
+            <summary>
+Vertex format contains 5 texture coordinate sets.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Texture4">
+            <summary>
+Vertex format contains 4 texture coordinate sets.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Texture3">
+            <summary>
+Vertex format contains 3 texture coordinate sets.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Texture2">
+            <summary>
+Vertex format contains 2 texture coordinate sets.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Texture1">
+            <summary>
+Vertex format contains 1 texture coordinate set.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Texture0">
+            <summary>
+Vertex format contains no texture coordinate sets.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PositionNormal">
+            <summary>
+Vertex format contains a position and a normal.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PositionW">
+            <summary>
+Vertex format contains transformed and clipped data.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PositionBlend5">
+            <summary>
+Vertex format contains position and weighting values for multimatrix blending operations.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PositionBlend4">
+            <summary>
+Vertex format contains position and weighting values for multimatrix blending operations.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PositionBlend3">
+            <summary>
+Vertex format contains position and weighting values for multimatrix blending operations.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PositionBlend2">
+            <summary>
+Vertex format contains position and weighting values for multimatrix blending operations.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PositionBlend1">
+            <summary>
+Vertex format contains position and weighting values for multimatrix blending operations.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PositionRhw">
+            <summary>
+Vertex format includes the position of a transformed vertex.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Position">
+            <summary>
+Vertex format includes the position of an untransformed vertex.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Specular">
+            <summary>
+Vertex format includes a specular color component.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Diffuse">
+            <summary>
+Vertex format includes a diffuse color component.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.PointSize">
+            <summary>
+Vertex format contains a point size.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.Normal">
+            <summary>
+Vertex format includes a vertex normal vector.
+</summary>
+        </member>
+        <member name="F:GTA.VertexFormat.None">
+            <summary>
+No vertex format defined.
+</summary>
+        </member>
+        <member name="T:GTA.TransformState">
+            <summary>
+Defines possible transformation states.
+</summary>
+            <unmanaged>D3DTRANSFORMSTATETYPE</unmanaged>
+        </member>
+        <member name="F:GTA.TransformState.Texture7">
+            <summary>
+Identifies the transformation matrix being set for the specified texture stage.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.Texture6">
+            <summary>
+Identifies the transformation matrix being set for the specified texture stage.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.Texture5">
+            <summary>
+Identifies the transformation matrix being set for the specified texture stage.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.Texture4">
+            <summary>
+Identifies the transformation matrix being set for the specified texture stage.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.Texture3">
+            <summary>
+Identifies the transformation matrix being set for the specified texture stage.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.Texture2">
+            <summary>
+Identifies the transformation matrix being set for the specified texture stage.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.Texture1">
+            <summary>
+Identifies the transformation matrix being set for the specified texture stage.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.Texture0">
+            <summary>
+Identifies the transformation matrix being set for the specified texture stage.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.World3">
+            <summary>
+Identifies the transformation matrix being set as a world transformation matrix.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.World2">
+            <summary>
+Identifies the transformation matrix being set as a world transformation matrix.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.World1">
+            <summary>
+Identifies the transformation matrix being set as a world transformation matrix.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.World">
+            <summary>
+Identifies the transformation matrix being set as a world transformation matrix.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.Projection">
+            <summary>
+Identifies the transformation matrix being set as the projection transformation matrix.
+</summary>
+        </member>
+        <member name="F:GTA.TransformState.View">
+            <summary>
+Identifies the transformation matrix being set as the view transformation matrix.
+</summary>
+        </member>
+        <member name="T:GTA.TextureFilter">
+            <summary>
+Defines texture filtering modes for a texture stage.
+</summary>
+            <unmanaged>D3DTEXTUREFILTERTYPE</unmanaged>
+        </member>
+        <member name="F:GTA.TextureFilter.ConvolutionMono">
+            <summary>
+Convolution filter for monochrome textures. Available for Direct3D9Ex only.
+</summary>
+        </member>
+        <member name="F:GTA.TextureFilter.GaussianQuad">
+            <summary>
+A 4 sample Guassian filter is used.
+</summary>
+        </member>
+        <member name="F:GTA.TextureFilter.PyramidalQuad">
+            <summary>
+A 4 sample tent filter is used.
+</summary>
+        </member>
+        <member name="F:GTA.TextureFilter.Anisotropic">
+            <summary>
+Anisotropic interpolation is used.
+</summary>
+        </member>
+        <member name="F:GTA.TextureFilter.Linear">
+            <summary>
+Bilinear interpolation is used.
+</summary>
+        </member>
+        <member name="F:GTA.TextureFilter.Point">
+            <summary>
+Point filtering is used.
+</summary>
+        </member>
+        <member name="F:GTA.TextureFilter.None">
+            <summary>
+Mipmapping is disabled.
+</summary>
+        </member>
+        <member name="T:GTA.ResourceType">
+            <summary>
+Defines resource types.
+</summary>
+            <unmanaged>D3DRESOURCETYPE</unmanaged>
+        </member>
+        <member name="F:GTA.ResourceType.IndexBuffer">
+            <summary>
+Index buffer resource.
+</summary>
+        </member>
+        <member name="F:GTA.ResourceType.VertexBuffer">
+            <summary>
+Vertex buffer resource.
+</summary>
+        </member>
+        <member name="F:GTA.ResourceType.CubeTexture">
+            <summary>
+Cube texture resource.
+</summary>
+        </member>
+        <member name="F:GTA.ResourceType.VolumeTexture">
+            <summary>
+Volume texture resource.
+</summary>
+        </member>
+        <member name="F:GTA.ResourceType.Texture">
+            <summary>
+Texture resource.
+</summary>
+        </member>
+        <member name="F:GTA.ResourceType.Volume">
+            <summary>
+Volume resource.
+</summary>
+        </member>
+        <member name="F:GTA.ResourceType.Surface">
+            <summary>
+Surface resource.
+</summary>
+        </member>
+        <member name="T:GTA.ImageFileFormat">
+            <summary>
+Describes the supported image file formats.
+</summary>
+            <unmanaged>D3DXIMAGE_FILEFORMAT</unmanaged>
+        </member>
+        <member name="F:GTA.ImageFileFormat.Pfm">
+            <summary>
+Portable float map file format.
+</summary>
+        </member>
+        <member name="F:GTA.ImageFileFormat.Hdr">
+            <summary>
+High dynamic range (HDR) file format.
+</summary>
+        </member>
+        <member name="F:GTA.ImageFileFormat.Dib">
+            <summary>
+Windows device-independent bitmap (DIB) file format.
+</summary>
+        </member>
+        <member name="F:GTA.ImageFileFormat.Ppm">
+            <summary>
+Portable pixmap (PPM) file format.
+</summary>
+        </member>
+        <member name="F:GTA.ImageFileFormat.Dds">
+            <summary>
+DirectDraw surface (DDS) file format.
+</summary>
+        </member>
+        <member name="F:GTA.ImageFileFormat.Png">
+            <summary>
+Portable Network Graphics (PNG) file format.
+</summary>
+        </member>
+        <member name="F:GTA.ImageFileFormat.Tga">
+            <summary>
+Truevision (Targa, or TGA) image file format.
+</summary>
+        </member>
+        <member name="F:GTA.ImageFileFormat.Jpg">
+            <summary>
+Joint Photographics Experts Group (JPEG) compressed file format.
+</summary>
+        </member>
+        <member name="F:GTA.ImageFileFormat.Bmp">
+            <summary>
+Windows bitmap (BMP) file format. 
+</summary>
+        </member>
+        <member name="T:GTA.Format">
+            <summary>
+Defines the various types of surface formats.
+</summary>
+            <unmanaged>D3DFORMAT</unmanaged>
+        </member>
+        <member name="F:GTA.Format.Unknown">
+            <summary>
+Unknown surface format.
+</summary>
+        </member>
+        <member name="F:GTA.Format.BinaryBuffer">
+            <summary>
+Binary buffer format indicating that the data has no inherent type. Available for Direct3D9Ex only.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A1">
+            <summary>
+1-bit monochrome format. Available for Direct3D9Ex only.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A4L4">
+            <summary>
+8-bit format using 4 bits each for alpha and luminance.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A8L8">
+            <summary>
+16-bit format using 8 bits each for alpha and luminance.
+</summary>
+        </member>
+        <member name="F:GTA.Format.L8">
+            <summary>
+8-bit luminance.
+</summary>
+        </member>
+        <member name="F:GTA.Format.L16">
+            <summary>
+16-bit luminance.
+</summary>
+        </member>
+        <member name="F:GTA.Format.P8">
+            <summary>
+8-bit color indexed.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A8P8">
+            <summary>
+8-bit color indexed with 8 bits of alpha.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A16B16G16R16">
+            <summary>
+64-bit pixel ABGR format using 16 bits for each channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.G16R16">
+            <summary>
+32-bit pixel format using 16 bits each for green and red.
+</summary>
+        </member>
+        <member name="F:GTA.Format.X8B8G8R8">
+            <summary>
+32-bit BGR format using 8 bits for each color channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A8B8G8R8">
+            <summary>
+32-bit ABGR format using 8 bits for each channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A2B10G10R10">
+            <summary>
+32-bit ABGR format using 2 bits for alpha and 10 bits for each color component.
+</summary>
+        </member>
+        <member name="F:GTA.Format.X4R4G4B4">
+            <summary>
+16-bit RGB format using 4 bits for each color channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A8R3G3B2">
+            <summary>
+16-bit ARGB format using 8 bits for alpha, 3 bits for red and green, and 2 bits for blue.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A8">
+            <summary>
+8-bit alpha format.
+</summary>
+        </member>
+        <member name="F:GTA.Format.R3G3B2">
+            <summary>
+8-bit RGB format using 3 bits for red and green and 2 bits for blue.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A4R4G4B4">
+            <summary>
+16-bit ARGB format using 4 bits for each channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.R8G8B8">
+            <summary>
+24-bit RGB format using 8 bits per channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.CxV8U8">
+            <summary>
+16-bit normal compression format.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Q16W16V16U16">
+            <summary>
+64-bit bump map format using 16 bits for each channel (Q, W, V, U).
+</summary>
+        </member>
+        <member name="F:GTA.Format.V16U16">
+            <summary>
+32-bit bump map format using 16 bits each for V and U.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Q8W8V8U8">
+            <summary>
+32-bit bump map format using 8 bits for each channel (Q, W, V, U).
+</summary>
+        </member>
+        <member name="F:GTA.Format.V8U8">
+            <summary>
+16-bit bump map format using 8 bits each for U and V.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A2W10V10U10">
+            <summary>
+32-bit bump map format using 2 bits for alpha and 10 bits each for W, V, and U.
+</summary>
+        </member>
+        <member name="F:GTA.Format.X8L8V8U8">
+            <summary>
+32-bit bump map format using 8 bits for each channel (luminance, V, U).
+</summary>
+        </member>
+        <member name="F:GTA.Format.L6V5U5">
+            <summary>
+16-bit bump map format using 6 bits for luminance and 5 bits each for V and U.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A32B32G32R32F">
+            <summary>
+128-bit floating point format using 32 bits for each channel (alpha, blue, green, red).
+</summary>
+        </member>
+        <member name="F:GTA.Format.G32R32F">
+            <summary>
+64-bit floating point format using 32 bits for the red channel and 32 bits for the green channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.R32F">
+            <summary>
+32-bit floating point format using 32 bits for the red channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Yuy2">
+            <summary>
+YUY2 format (PC98 compliance).
+</summary>
+        </member>
+        <member name="F:GTA.Format.Uyvy">
+            <summary>
+UYUV format (PC98 compliance).
+</summary>
+        </member>
+        <member name="F:GTA.Format.R8G8_B8G8">
+            <summary>
+16-bit packed RGB format consisting of pixel pairs to express color.
+</summary>
+        </member>
+        <member name="F:GTA.Format.G8R8_G8B8">
+            <summary>
+16-bit packed RGB format consisting of pixel pairs to express color.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Multi2Argb8">
+            <summary>
+Multielement texture.
+</summary>
+        </member>
+        <member name="F:GTA.Format.A16B16G16R16F">
+            <summary>
+64-bit floating point format using 16 bits for each channel (alpha, blue, green, red).
+</summary>
+        </member>
+        <member name="F:GTA.Format.G16R16F">
+            <summary>
+32-bit floating point format using 16 bits for the red channel and 16 bits for the green channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.R16F">
+            <summary>
+16-bit floating point format using 16 bits for the red channel.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Dxt5">
+            <summary>
+DXT5 compression texture format.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Dxt4">
+            <summary>
+DXT4 compression texture format.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Dxt3">
+            <summary>
+DXT3 compression texture format.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Dxt2">
+            <summary>
+DXT2 compression texture format.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Dxt1">
+            <summary>
+DXT1 compression texture format.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Index32">
+            <summary>
+32-bit index buffer bit depth.
+</summary>
+        </member>
+        <member name="F:GTA.Format.Index16">
+            <summary>
+16-bit index buffer bit depth.
+</summary>
+        </member>
+        <member name="F:GTA.Format.VertexData">
+            <summary>
+Describes a vertex buffer surface.
+</summary>
+        </member>
+        <member name="F:GTA.Format.D16">
+            <summary>
+16-bit z-buffer format with 16 bits for depth.
+</summary>
+        </member>
+        <member name="F:GTA.Format.S8Lockable">
+            <summary>
+Lockable 8-bit stencil buffer. Available for Direct3D9Ex only.
+</summary>
+        </member>
+        <member name="F:GTA.Format.D32Lockable">
+            <summary>
+Lockable 32-bit depth buffer. Available for Direct3D9Ex only.
+</summary>
+        </member>
+        <member name="F:GTA.Format.D24SingleS8">
+            <summary>
+32-bit z-buffer format with 24 bits for depth (in 24-bit floating point format) and 8 bits for stencil.
+</summary>
+        </member>
+        <member name="F:GTA.Format.D32SingleLockable">
+            <summary>
+32-bit z-buffer lockable format with 32 bits for depth (in standard IEEE floating point format).
+</summary>
+        </member>
+        <member name="F:GTA.Format.D24X4S4">
+            <summary>
+32-bit z-buffer format with 24 bits for depth and 4 bits for stencil.
+</summary>
+        </member>
+        <member name="F:GTA.Format.D24X8">
+            <summary>
+32-bit z-buffer format with 24 bits for depth.
+</summary>
+        </member>
+        <member name="F:GTA.Format.D24S8">
+            <summary>
+32-bit z-buffer format with 24 bits for depth and 8 bits for stencil.
+</summary>
+        </member>
+        <member name="F:GTA.Format.D15S1">
+            <summary>
+16-bit z-buffer format with 15 bits for depth and 1 bit for stencil.
+</summary>
+        </member>
+        <member name="F:GTA.Format.D32">
+            <summary>
+32-bit z-buffer format with 32 bits for depth.
+</summary>
+        </member>
+        <member name="F:GTA.Format.D16Lockable">
+            <summary>
+16-bit z-buffer lockable format with 16 bits for depth.
+</summary>
+        </member>
+        <member name="F:GTA.Format.R5G6B5">
+            <summary>
+16-bit surface format using 5 bits for red and blue and 6 bits for green.
+</summary>
+        </member>
+        <member name="F:GTA.Format.X1R5G5B5">
+            <summary>
+16-bit surface format using 5 bits for each color component (red, green, blue).
+</summary>
+        </member>
+        <member name="F:GTA.Format.A1R5G5B5">
+            <summary>
+16-bit surface format using 1 bit for alpha and 5 bits for each channel (red, green, blue).
+</summary>
+        </member>
+        <member name="F:GTA.Format.X8R8G8B8">
+            <summary>
+32-bit surface format using 8 bits for each color component (red, green, blue).
+</summary>
+        </member>
+        <member name="F:GTA.Format.A8R8G8B8">
+            <summary>
+32-bit surface format using 8 bits for each channel (alpha, red, green, blue). 
+</summary>
+        </member>
+        <member name="F:GTA.Format.A2R10G10B10">
+            <summary>
+32-bit surface format using 2 bits for alpha and 10 bits for color components (red, green, blue).
+</summary>
+        </member>
+        <member name="F:GTA.GameEpisode.TBOGT">
+            <summary>
+Episode "The Ballad Of Gay Tony"
+</summary>
+        </member>
+        <member name="F:GTA.GameEpisode.TLAD">
+            <summary>
+Episode "The Lost And Damned"
+</summary>
+        </member>
+        <member name="F:GTA.GameEpisode.GTAIV">
+            <summary>
+GTA IV Main Game
+</summary>
+        </member>
+        <member name="F:GTA.VehicleWheel.RearRight">
+            <summary>
+Right Rear Wheel. Unused for bikes.
+</summary>
+        </member>
+        <member name="F:GTA.VehicleWheel.RearLeft">
+            <summary>
+Left Rear Wheel. Rear Wheel for bikes.
+</summary>
+        </member>
+        <member name="F:GTA.VehicleWheel.CenterRight">
+            <summary>
+Right Central Wheel. Unused for bikes and 4-wheeled vehicles.
+</summary>
+        </member>
+        <member name="F:GTA.VehicleWheel.CenterLeft">
+            <summary>
+Left Central Wheel. Unused for bikes and 4-wheeled vehicles.
+</summary>
+        </member>
+        <member name="F:GTA.VehicleWheel.FrontRight">
+            <summary>
+Right Front Wheel. Unused for bikes.
+</summary>
+        </member>
+        <member name="F:GTA.VehicleWheel.FrontLeft">
+            <summary>
+Left Front Wheel. Front Wheel for bikes.
+</summary>
+        </member>
+        <member name="F:GTA.FontScaling.Pixel">
+            <summary>
+A value between 0 and the maximum screen resolution (check Game.Resolution to get the size)
+</summary>
+        </member>
+        <member name="F:GTA.FontScaling.ScreenUnits">
+            <summary>
+A value between 0 and 1, where 1 equals full screen size
+</summary>
+        </member>
+        <member name="F:GTA.FontScaling.FontSize">
+            <summary>
+A value between 0 and 20, where 20 equals full screen size
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.NoClip">
+            <summary>
+Don't clip the text.
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.ExpandTabs">
+            <summary>
+Expand tab characters.
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.SingleLine">
+            <summary>
+Force all text to a single line.
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.WordBreak">
+            <summary>
+Allow word breaks.
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.Bottom">
+            <summary>
+Align the text to the bottom.
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.VerticalCenter">
+            <summary>
+Vertically align the text to the center.
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.Right">
+            <summary>
+Align the text to the right.
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.Center">
+            <summary>
+Align the text to the center.
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.Left">
+            <summary>
+Align the text to the left.
+</summary>
+        </member>
+        <member name="F:GTA.TextAlignment.Top">
+            <summary>
+Align the text to the top.
+</summary>
+        </member>
+        <member name="M:ID3DDeviceHook.OnResetDevice(IDirect3DDevice9*,_D3DPRESENT_PARAMETERS_*)">
+Executed once during service start up, and for every time the device is reset
+</member>
+        <member name="M:IService.GetServiceName">
+Get the name of the service (must be unique, case insentitive)
+</member>
+    </members>
+</doc>
