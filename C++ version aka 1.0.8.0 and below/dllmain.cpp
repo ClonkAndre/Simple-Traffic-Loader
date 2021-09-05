@@ -5,7 +5,7 @@
 
 #pragma region Variables
 std::vector<std::string> models;
-std::vector<std::string> requestedModels;
+std::vector<std::string> requestedModels; // Forgot to remove this line - this line never gets used.
 int tickTemp;
 #pragma endregion
 
